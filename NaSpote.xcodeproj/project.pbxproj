@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3114196D27876931002986D7 /* DetailWakeboardGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114196C27876931002986D7 /* DetailWakeboardGalleryCell.swift */; };
+		31141973278B0196002986D7 /* SnowboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141972278B0196002986D7 /* SnowboardManager.swift */; };
+		31141975278B01A1002986D7 /* SnowboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141974278B01A1002986D7 /* SnowboardModel.swift */; };
+		31141977278B01B0002986D7 /* DetailSnowboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141976278B01B0002986D7 /* DetailSnowboardManager.swift */; };
+		31141979278B01BE002986D7 /* DetailSnowboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141978278B01BE002986D7 /* DetailSnowboardModel.swift */; };
+		3114197C278B02BF002986D7 /* SnowboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114197B278B02BF002986D7 /* SnowboardViewController.swift */; };
+		3114197E278B0342002986D7 /* SnowboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114197D278B0342002986D7 /* SnowboardCell.swift */; };
+		31141980278F582F002986D7 /* LcationSnowboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114197F278F582F002986D7 /* LcationSnowboardViewController.swift */; };
+		31141983278F63B9002986D7 /* DetailSnowboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141982278F63B9002986D7 /* DetailSnowboardViewController.swift */; };
+		31141985278F67DD002986D7 /* DetailSnowboardGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141984278F67DD002986D7 /* DetailSnowboardGalleryCell.swift */; };
+		3117AAD3273AADEE00E7A9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AAD2273AADEE00E7A9EB /* AppDelegate.swift */; };
+		3117AAD5273AADEE00E7A9EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AAD4273AADEE00E7A9EB /* SceneDelegate.swift */; };
+		3117AADA273AADEE00E7A9EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3117AAD8273AADEE00E7A9EB /* Main.storyboard */; };
+		3117AADD273AADEE00E7A9EB /* NaSpote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3117AADB273AADEE00E7A9EB /* NaSpote.xcdatamodeld */; };
+		3117AADF273AADF000E7A9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3117AADE273AADF000E7A9EB /* Assets.xcassets */; };
+		3117AAE2273AADF000E7A9EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3117AAE0273AADF000E7A9EB /* LaunchScreen.storyboard */; };
+		3117AB95274AACE100E7A9EB /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AB94274AACE100E7A9EB /* NewsManager.swift */; };
+		3117AB98274AB7BB00E7A9EB /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AB97274AB7BB00E7A9EB /* NewsModel.swift */; };
+		31368C522780F75A009087BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C512780F75A009087BF /* MainViewController.swift */; };
+		31368C542780F78F009087BF /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C532780F78F009087BF /* SideMenuViewController.swift */; };
+		31368C572780F7C6009087BF /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C562780F7C6009087BF /* SideMenuModel.swift */; };
+		31368C5A2780F95F009087BF /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C582780F95F009087BF /* SideMenuCell.swift */; };
+		31368C5B2780F95F009087BF /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31368C592780F95F009087BF /* SideMenuCell.xib */; };
+		31368C802785F294009087BF /* DetailWakeboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C7F2785F294009087BF /* DetailWakeboardManager.swift */; };
+		31368C822785F29D009087BF /* DetailWakeboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C812785F29D009087BF /* DetailWakeboardModel.swift */; };
+		31368C842785F2D0009087BF /* DetailWakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */; };
+		319864C627609FAE001837CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319864C527609FAE001837CE /* MapKit.framework */; };
+		319864CA27610DDD001837CE /* LocationWakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319864C927610DDD001837CE /* LocationWakeboardViewController.swift */; };
+		31BC9D72275A5B2F00A7B474 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D71275A5B2F00A7B474 /* NewsViewController.swift */; };
+		31BC9D78275BCEC900A7B474 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D77275BCEC900A7B474 /* NewsCell.swift */; };
+		31BC9D7A275BDC0C00A7B474 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D79275BDC0C00A7B474 /* DetailNewsViewController.swift */; };
+		31BC9D7C275BF44F00A7B474 /* DetailNewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D7B275BF44F00A7B474 /* DetailNewsManager.swift */; };
+		31BC9D7E275BFBB000A7B474 /* DetailNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D7D275BFBB000A7B474 /* DetailNewsModel.swift */; };
+		31BC9D81275CE52F00A7B474 /* WakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D80275CE52F00A7B474 /* WakeboardViewController.swift */; };
+		31BC9D83275CE55000A7B474 /* WakeboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D82275CE55000A7B474 /* WakeboardCell.swift */; };
+		31BC9D86275CE5FA00A7B474 /* WakeboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */; };
+		31BC9D88275CE60700A7B474 /* WakeboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D87275CE60700A7B474 /* WakeboardModel.swift */; };
+		95817E1F5502E19ADB534B32 /* Pods_NaSpote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023DF0BFF193E97D87695B6A /* Pods_NaSpote.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		023DF0BFF193E97D87695B6A /* Pods_NaSpote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaSpote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B571B1BE65FED5D6E88162F /* Pods-NaSpote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaSpote.release.xcconfig"; path = "Target Support Files/Pods-NaSpote/Pods-NaSpote.release.xcconfig"; sourceTree = "<group>"; };
+		3114196C27876931002986D7 /* DetailWakeboardGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardGalleryCell.swift; sourceTree = "<group>"; };
+		31141972278B0196002986D7 /* SnowboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardManager.swift; sourceTree = "<group>"; };
+		31141974278B01A1002986D7 /* SnowboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardModel.swift; sourceTree = "<group>"; };
+		31141976278B01B0002986D7 /* DetailSnowboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSnowboardManager.swift; sourceTree = "<group>"; };
+		31141978278B01BE002986D7 /* DetailSnowboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSnowboardModel.swift; sourceTree = "<group>"; };
+		3114197B278B02BF002986D7 /* SnowboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardViewController.swift; sourceTree = "<group>"; };
+		3114197D278B0342002986D7 /* SnowboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardCell.swift; sourceTree = "<group>"; };
+		3114197F278F582F002986D7 /* LcationSnowboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LcationSnowboardViewController.swift; sourceTree = "<group>"; };
+		31141982278F63B9002986D7 /* DetailSnowboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSnowboardViewController.swift; sourceTree = "<group>"; };
+		31141984278F67DD002986D7 /* DetailSnowboardGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSnowboardGalleryCell.swift; sourceTree = "<group>"; };
+		3117AACF273AADEE00E7A9EB /* NaSpote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaSpote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3117AAD2273AADEE00E7A9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3117AAD4273AADEE00E7A9EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3117AAD9273AADEE00E7A9EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3117AADC273AADEE00E7A9EB /* NaSpote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NaSpote.xcdatamodel; sourceTree = "<group>"; };
+		3117AADE273AADF000E7A9EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3117AAE1273AADF000E7A9EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3117AAE3273AADF000E7A9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3117AB94274AACE100E7A9EB /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
+		3117AB97274AB7BB00E7A9EB /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		31368C512780F75A009087BF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		31368C532780F78F009087BF /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		31368C562780F7C6009087BF /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
+		31368C582780F95F009087BF /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		31368C592780F95F009087BF /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
+		31368C7F2785F294009087BF /* DetailWakeboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardManager.swift; sourceTree = "<group>"; };
+		31368C812785F29D009087BF /* DetailWakeboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardModel.swift; sourceTree = "<group>"; };
+		31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardViewController.swift; sourceTree = "<group>"; };
+		319864C527609FAE001837CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		319864C927610DDD001837CE /* LocationWakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWakeboardViewController.swift; sourceTree = "<group>"; };
+		31BC9D71275A5B2F00A7B474 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		31BC9D77275BCEC900A7B474 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		31BC9D79275BDC0C00A7B474 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
+		31BC9D7B275BF44F00A7B474 /* DetailNewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsManager.swift; sourceTree = "<group>"; };
+		31BC9D7D275BFBB000A7B474 /* DetailNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsModel.swift; sourceTree = "<group>"; };
+		31BC9D80275CE52F00A7B474 /* WakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardViewController.swift; sourceTree = "<group>"; };
+		31BC9D82275CE55000A7B474 /* WakeboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardCell.swift; sourceTree = "<group>"; };
+		31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardManager.swift; sourceTree = "<group>"; };
+		31BC9D87275CE60700A7B474 /* WakeboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardModel.swift; sourceTree = "<group>"; };
+		503B60BCCCF21F93EA187164 /* Pods-NaSpote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaSpote.debug.xcconfig"; path = "Target Support Files/Pods-NaSpote/Pods-NaSpote.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3117AACC273AADEE00E7A9EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319864C627609FAE001837CE /* MapKit.framework in Frameworks */,
+				95817E1F5502E19ADB534B32 /* Pods_NaSpote.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C5803D7DFC783799DE71561 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				503B60BCCCF21F93EA187164 /* Pods-NaSpote.debug.xcconfig */,
+				2B571B1BE65FED5D6E88162F /* Pods-NaSpote.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3114196F27878AA3002986D7 /* Wakeboard */ = {
+			isa = PBXGroup;
+			children = (
+				31BC9D80275CE52F00A7B474 /* WakeboardViewController.swift */,
+				31BC9D82275CE55000A7B474 /* WakeboardCell.swift */,
+				319864C927610DDD001837CE /* LocationWakeboardViewController.swift */,
+				31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */,
+				3114196C27876931002986D7 /* DetailWakeboardGalleryCell.swift */,
+			);
+			path = Wakeboard;
+			sourceTree = "<group>";
+		};
+		3114197027878AB5002986D7 /* Snowboard */ = {
+			isa = PBXGroup;
+			children = (
+				3114197B278B02BF002986D7 /* SnowboardViewController.swift */,
+				3114197D278B0342002986D7 /* SnowboardCell.swift */,
+				3114197F278F582F002986D7 /* LcationSnowboardViewController.swift */,
+				31141982278F63B9002986D7 /* DetailSnowboardViewController.swift */,
+				31141984278F67DD002986D7 /* DetailSnowboardGalleryCell.swift */,
+			);
+			path = Snowboard;
+			sourceTree = "<group>";
+		};
+		31141971278B015C002986D7 /* Snowboard */ = {
+			isa = PBXGroup;
+			children = (
+				31141972278B0196002986D7 /* SnowboardManager.swift */,
+				31141974278B01A1002986D7 /* SnowboardModel.swift */,
+				31141976278B01B0002986D7 /* DetailSnowboardManager.swift */,
+				31141978278B01BE002986D7 /* DetailSnowboardModel.swift */,
+			);
+			path = Snowboard;
+			sourceTree = "<group>";
+		};
+		31141981278F5CCA002986D7 /* Spots */ = {
+			isa = PBXGroup;
+			children = (
+				31BC9D84275CE5E500A7B474 /* Wakeboard */,
+				31141971278B015C002986D7 /* Snowboard */,
+			);
+			path = Spots;
+			sourceTree = "<group>";
+		};
+		3117AAC6273AADEE00E7A9EB = {
+			isa = PBXGroup;
+			children = (
+				3117AAD1273AADEE00E7A9EB /* NaSpote */,
+				3117AAD0273AADEE00E7A9EB /* Products */,
+				0C5803D7DFC783799DE71561 /* Pods */,
+				D836932BA1EDA0AF89296FB6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3117AAD0273AADEE00E7A9EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3117AACF273AADEE00E7A9EB /* NaSpote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3117AAD1273AADEE00E7A9EB /* NaSpote */ = {
+			isa = PBXGroup;
+			children = (
+				3117AAD2273AADEE00E7A9EB /* AppDelegate.swift */,
+				3117AAD4273AADEE00E7A9EB /* SceneDelegate.swift */,
+				3117AB93274AACCB00E7A9EB /* Models */,
+				3117AB92274AACBA00E7A9EB /* Views */,
+				3117AB91274AAC7700E7A9EB /* Controllers */,
+				3117AADE273AADF000E7A9EB /* Assets.xcassets */,
+				3117AAE3273AADF000E7A9EB /* Info.plist */,
+				3117AADB273AADEE00E7A9EB /* NaSpote.xcdatamodeld */,
+			);
+			path = NaSpote;
+			sourceTree = "<group>";
+		};
+		3117AB91274AAC7700E7A9EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				31368C502780F701009087BF /* SideMenuController */,
+				31BC9D70275A5B0700A7B474 /* NewsViewController */,
+				31BC9D7F275CE4F200A7B474 /* SpotsViewController */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3117AB92274AACBA00E7A9EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3117AAD8273AADEE00E7A9EB /* Main.storyboard */,
+				3117AAE0273AADF000E7A9EB /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3117AB93274AACCB00E7A9EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31368C552780F7A2009087BF /* SideMenu */,
+				3117AB96274AACE600E7A9EB /* News */,
+				31141981278F5CCA002986D7 /* Spots */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3117AB96274AACE600E7A9EB /* News */ = {
+			isa = PBXGroup;
+			children = (
+				3117AB94274AACE100E7A9EB /* NewsManager.swift */,
+				3117AB97274AB7BB00E7A9EB /* NewsModel.swift */,
+				31BC9D7B275BF44F00A7B474 /* DetailNewsManager.swift */,
+				31BC9D7D275BFBB000A7B474 /* DetailNewsModel.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		31368C502780F701009087BF /* SideMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				31368C512780F75A009087BF /* MainViewController.swift */,
+				31368C532780F78F009087BF /* SideMenuViewController.swift */,
+				31368C582780F95F009087BF /* SideMenuCell.swift */,
+				31368C592780F95F009087BF /* SideMenuCell.xib */,
+			);
+			name = SideMenuController;
+			sourceTree = "<group>";
+		};
+		31368C552780F7A2009087BF /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				31368C562780F7C6009087BF /* SideMenuModel.swift */,
+			);
+			name = SideMenu;
+			sourceTree = "<group>";
+		};
+		31BC9D70275A5B0700A7B474 /* NewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				31BC9D71275A5B2F00A7B474 /* NewsViewController.swift */,
+				31BC9D77275BCEC900A7B474 /* NewsCell.swift */,
+				31BC9D79275BDC0C00A7B474 /* DetailNewsViewController.swift */,
+			);
+			path = NewsViewController;
+			sourceTree = "<group>";
+		};
+		31BC9D7F275CE4F200A7B474 /* SpotsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3114196F27878AA3002986D7 /* Wakeboard */,
+				3114197027878AB5002986D7 /* Snowboard */,
+			);
+			path = SpotsViewController;
+			sourceTree = "<group>";
+		};
+		31BC9D84275CE5E500A7B474 /* Wakeboard */ = {
+			isa = PBXGroup;
+			children = (
+				31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */,
+				31BC9D87275CE60700A7B474 /* WakeboardModel.swift */,
+				31368C7F2785F294009087BF /* DetailWakeboardManager.swift */,
+				31368C812785F29D009087BF /* DetailWakeboardModel.swift */,
+			);
+			path = Wakeboard;
+			sourceTree = "<group>";
+		};
+		D836932BA1EDA0AF89296FB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				319864C527609FAE001837CE /* MapKit.framework */,
+				023DF0BFF193E97D87695B6A /* Pods_NaSpote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3117AACE273AADEE00E7A9EB /* NaSpote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3117AAE6273AADF000E7A9EB /* Build configuration list for PBXNativeTarget "NaSpote" */;
+			buildPhases = (
+				44486C9086FFE7D029E5EFE7 /* [CP] Check Pods Manifest.lock */,
+				3117AACB273AADEE00E7A9EB /* Sources */,
+				3117AACC273AADEE00E7A9EB /* Frameworks */,
+				3117AACD273AADEE00E7A9EB /* Resources */,
+				DAD886E3EEA6AC1B54A55EF5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NaSpote;
+			productName = NaSpote;
+			productReference = 3117AACF273AADEE00E7A9EB /* NaSpote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3117AAC7273AADEE00E7A9EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3117AACE273AADEE00E7A9EB = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 3117AACA273AADEE00E7A9EB /* Build configuration list for PBXProject "NaSpote" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3117AAC6273AADEE00E7A9EB;
+			productRefGroup = 3117AAD0273AADEE00E7A9EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3117AACE273AADEE00E7A9EB /* NaSpote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3117AACD273AADEE00E7A9EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3117AAE2273AADF000E7A9EB /* LaunchScreen.storyboard in Resources */,
+				3117AADF273AADF000E7A9EB /* Assets.xcassets in Resources */,
+				3117AADA273AADEE00E7A9EB /* Main.storyboard in Resources */,
+				31368C5B2780F95F009087BF /* SideMenuCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44486C9086FFE7D029E5EFE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NaSpote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAD886E3EEA6AC1B54A55EF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NaSpote/Pods-NaSpote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NaSpote/Pods-NaSpote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NaSpote/Pods-NaSpote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3117AACB273AADEE00E7A9EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3117AB98274AB7BB00E7A9EB /* NewsModel.swift in Sources */,
+				31BC9D72275A5B2F00A7B474 /* NewsViewController.swift in Sources */,
+				3114196D27876931002986D7 /* DetailWakeboardGalleryCell.swift in Sources */,
+				31368C5A2780F95F009087BF /* SideMenuCell.swift in Sources */,
+				31141980278F582F002986D7 /* LcationSnowboardViewController.swift in Sources */,
+				31BC9D78275BCEC900A7B474 /* NewsCell.swift in Sources */,
+				31BC9D83275CE55000A7B474 /* WakeboardCell.swift in Sources */,
+				3114197E278B0342002986D7 /* SnowboardCell.swift in Sources */,
+				3117AAD3273AADEE00E7A9EB /* AppDelegate.swift in Sources */,
+				31368C802785F294009087BF /* DetailWakeboardManager.swift in Sources */,
+				319864CA27610DDD001837CE /* LocationWakeboardViewController.swift in Sources */,
+				31141979278B01BE002986D7 /* DetailSnowboardModel.swift in Sources */,
+				31141983278F63B9002986D7 /* DetailSnowboardViewController.swift in Sources */,
+				3117AADD273AADEE00E7A9EB /* NaSpote.xcdatamodeld in Sources */,
+				31368C522780F75A009087BF /* MainViewController.swift in Sources */,
+				31141977278B01B0002986D7 /* DetailSnowboardManager.swift in Sources */,
+				3117AB95274AACE100E7A9EB /* NewsManager.swift in Sources */,
+				31BC9D88275CE60700A7B474 /* WakeboardModel.swift in Sources */,
+				3114197C278B02BF002986D7 /* SnowboardViewController.swift in Sources */,
+				31368C542780F78F009087BF /* SideMenuViewController.swift in Sources */,
+				31BC9D7A275BDC0C00A7B474 /* DetailNewsViewController.swift in Sources */,
+				31BC9D7E275BFBB000A7B474 /* DetailNewsModel.swift in Sources */,
+				31141973278B0196002986D7 /* SnowboardManager.swift in Sources */,
+				31368C572780F7C6009087BF /* SideMenuModel.swift in Sources */,
+				3117AAD5273AADEE00E7A9EB /* SceneDelegate.swift in Sources */,
+				31141975278B01A1002986D7 /* SnowboardModel.swift in Sources */,
+				31141985278F67DD002986D7 /* DetailSnowboardGalleryCell.swift in Sources */,
+				31368C822785F29D009087BF /* DetailWakeboardModel.swift in Sources */,
+				31BC9D7C275BF44F00A7B474 /* DetailNewsManager.swift in Sources */,
+				31368C842785F2D0009087BF /* DetailWakeboardViewController.swift in Sources */,
+				31BC9D86275CE5FA00A7B474 /* WakeboardManager.swift in Sources */,
+				31BC9D81275CE52F00A7B474 /* WakeboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3117AAD8273AADEE00E7A9EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3117AAD9273AADEE00E7A9EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3117AAE0273AADF000E7A9EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3117AAE1273AADF000E7A9EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3117AAE4273AADF000E7A9EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3117AAE5273AADF000E7A9EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3117AAE7273AADF000E7A9EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 503B60BCCCF21F93EA187164 /* Pods-NaSpote.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HZU66MWZY7;
+				INFOPLIST_FILE = NaSpote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.himynameisartem.NaSpote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3117AAE8273AADF000E7A9EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B571B1BE65FED5D6E88162F /* Pods-NaSpote.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HZU66MWZY7;
+				INFOPLIST_FILE = NaSpote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.himynameisartem.NaSpote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3117AACA273AADEE00E7A9EB /* Build configuration list for PBXProject "NaSpote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3117AAE4273AADF000E7A9EB /* Debug */,
+				3117AAE5273AADF000E7A9EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3117AAE6273AADF000E7A9EB /* Build configuration list for PBXNativeTarget "NaSpote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3117AAE7273AADF000E7A9EB /* Debug */,
+				3117AAE8273AADF000E7A9EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3117AADB273AADEE00E7A9EB /* NaSpote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3117AADC273AADEE00E7A9EB /* NaSpote.xcdatamodel */,
+			);
+			currentVersion = 3117AADC273AADEE00E7A9EB /* NaSpote.xcdatamodel */;
+			path = NaSpote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3117AAC7273AADEE00E7A9EB /* Project object */;
+}
