@@ -21,7 +21,7 @@ class NewsCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        shadowView.layer.cornerRadius = 5
+        shadowView.layer.cornerRadius = 10
         shadowView.makeShadow()
         imageCornerRadius()
     }
@@ -29,7 +29,7 @@ class NewsCell: UITableViewCell {
     func imageCornerRadius() {
         let path = UIBezierPath(roundedRect:newsImage.bounds,
                                 byRoundingCorners:[.topRight, .topLeft],
-                                cornerRadii: CGSize(width: 5, height:  5))
+                                cornerRadii: CGSize(width: 10, height:  10))
 
         let maskLayer = CAShapeLayer()
 
@@ -42,8 +42,8 @@ class NewsCell: UITableViewCell {
 extension UIView {
     func makeShadow() {
         self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowOpacity = 0.5
-        self.layer.shadowOffset = CGSize(width: 7, height: 7)
-        self.layer.shadowRadius = 10
+        self.layer.shadowOpacity = 0.7
+        self.layer.shadowOffset = CGSize(width: 1, height: 1)
+        self.layer.shadowRadius = 13
     }
 }

@@ -19,8 +19,9 @@ class WakeboardCell: UITableViewCell {
         super.awakeFromNib()
         
         spotShadow.makeShadows()
-        spotShadow.layer.cornerRadius = 5
+        spotShadow.layer.cornerRadius = 10
         spotImage.layer.cornerRadius = spotImage.frame.size.width / 2
+        spotImage.layer.borderWidth = 0.5
     
     }
     
@@ -34,8 +35,8 @@ class WakeboardCell: UITableViewCell {
 extension UIView {
     func makeSnowShadows() {
         self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowOpacity = 0.5
-        self.layer.shadowOffset = CGSize(width: 7, height: 7)
+        self.layer.shadowOpacity = 0.7
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.layer.shadowRadius = 10
         
     }
