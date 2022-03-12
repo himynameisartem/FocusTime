@@ -28,12 +28,10 @@ class DetailNewsViewController: UIViewController {
         super.viewDidLoad()
         
         detailNewsManager.delegate = self
-
             DispatchQueue.main.async {
                 self.detailNewsManager.fetchNews(self.txt)
                 self.newsTxt.text = self.newsString
             }
-
         newsTxt.showsVerticalScrollIndicator = false
         newsImg.image = image
     }

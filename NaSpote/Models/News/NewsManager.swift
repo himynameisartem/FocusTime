@@ -22,6 +22,7 @@ struct NewsManager {
         var newsImage = [String]()
         var newsString = [String]()
         var newsLink = [String]()
+        var imageUi = [UIImage]()
         
         let urlString = "https://naspote.fun"
         if let url = URL(string: urlString) {

@@ -28,6 +28,7 @@ class DetailWakeboardViewController: UIViewController {
     @IBOutlet var infoLabelCollection: [UILabel]!
     @IBOutlet var contactsLabelCollection: [UILabel]!
     @IBOutlet var locationOutlet: MKMapView!
+    @IBOutlet var shadowView: UIView!
     
     
     override func viewDidLoad() {
@@ -37,7 +38,8 @@ class DetailWakeboardViewController: UIViewController {
         
         galleryCollectionView.delegate = self
         galleryCollectionView.dataSource = self
-        //        galleryCollectionView.register(DetailSpotGalleryCell.self, forCellWithReuseIdentifier: "galleryCell")
+        shadowView.layer.cornerRadius = 10
+        shadowView.makeShadow()
         
         DispatchQueue.main.async {
             self.detailSpotManager.delegate = self
@@ -125,7 +127,7 @@ extension DetailWakeboardViewController: UICollectionViewDelegate, UICollectionV
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //        let width = (self.view.frame.size.width - 12 * 3) / 3 //some width
         //            let height = width * 1.5 //ratio
-        return CGSize(width: 350, height: 120)
+        return CGSize(width: 240, height: 150)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

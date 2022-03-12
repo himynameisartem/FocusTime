@@ -12,3 +12,5 @@ class DetailSnowboardGalleryCell: UICollectionViewCell {
     @IBOutlet var galleryImageView: UIImageView!
     
 }
+
+

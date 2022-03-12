@@ -21,7 +21,6 @@ class NewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         tableView.showsVerticalScrollIndicator = false
         newsManager.delegate = self
         
@@ -31,13 +30,12 @@ class NewsViewController: UITableViewController {
             self.newsManager.fetchNews()
             self.tableView.reloadData()
         }
-     
     }
 
+    // MARK: TableView
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return newsString.count
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -69,13 +67,13 @@ class NewsViewController: UITableViewController {
     }
 }
 
+// MARK: MaagerDelegate
+
 extension NewsViewController: NewsManagerDelegate {
     func didUpdateNews(news: NewsModel) {
-        
         self.newsString = news.newsString
         self.newsImage = news.newsImage
         self.newsLink = news.newsLink
-
     }
     
     func didFailWithError(error: Error) {

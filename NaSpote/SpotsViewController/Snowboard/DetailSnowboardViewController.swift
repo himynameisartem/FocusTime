@@ -28,6 +28,7 @@ class DetailSnowboardViewController: UIViewController {
     @IBOutlet var infoLabelCollection: [UILabel]!
     @IBOutlet var contactsLabelCollection: [UILabel]!
     @IBOutlet var locationOutlet: MKMapView!
+    @IBOutlet var shadowView: UIView!
     
     
     override func viewDidLoad() {
@@ -37,6 +38,8 @@ class DetailSnowboardViewController: UIViewController {
         
         galleryCollectionView.delegate = self
         galleryCollectionView.dataSource = self
+        shadowView.makeShadow()
+        shadowView.layer.cornerRadius = 10
         //        galleryCollectionView.register(DetailSpotGalleryCell.self, forCellWithReuseIdentifier: "galleryCell")
         
         DispatchQueue.main.async {
@@ -120,9 +123,9 @@ extension DetailSnowboardViewController: DetailSnowboardManagerDelegate {
 extension DetailSnowboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //        let width = (self.view.frame.size.width - 12 * 3) / 3 //some width
-        //            let height = width * 1.5 //ratio
-        return CGSize(width: 350, height: 120)
+//                let width = (self.view.frame.size.width - 12 * 3) / 3 //some width
+//                    let height = width * 1.5 //ratio
+        return CGSize(width: 240, height: 150)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -147,6 +150,9 @@ extension DetailSnowboardViewController: UICollectionViewDelegate, UICollectionV
     }
     
 }
+
+
+
 
 
 
