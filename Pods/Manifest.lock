@@ -1,20 +1,24 @@
 PODS:
+  - Kingfisher (7.2.0)
   - SideMenu (6.5.0)
   - SwiftSoup (2.3.3)
 
 DEPENDENCIES:
+  - Kingfisher
   - SideMenu
   - SwiftSoup
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - SideMenu
     - SwiftSoup
 
 SPEC CHECKSUMS:
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SwiftSoup: 8e4844e785a975744f2c2606f8b3844ef67eb259
 
-PODFILE CHECKSUM: f67456a57379495d04a729613a50543d1d7db3a1
+PODFILE CHECKSUM: 9acd35a16397406cbd370153e06c0afb9914c544
 
 COCOAPODS: 1.11.2

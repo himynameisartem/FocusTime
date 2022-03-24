@@ -12,5 +12,5 @@ struct SnowboardModel {
     let spotTitle: [String]
     let spotMap: [String]
     let spotLink: [String]
-    let spotImg: [UIImage]
+    let spotImg: [String]
 }

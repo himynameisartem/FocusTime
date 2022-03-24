@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import Kingfisher
 
 class DetailWakeboardViewController: UIViewController {
     
@@ -38,8 +39,12 @@ class DetailWakeboardViewController: UIViewController {
         
         galleryCollectionView.delegate = self
         galleryCollectionView.dataSource = self
+        
         shadowView.layer.cornerRadius = 10
         shadowView.makeShadow()
+        
+        resizeFont()
+        
         
         DispatchQueue.main.async {
             self.detailSpotManager.delegate = self
@@ -47,8 +52,21 @@ class DetailWakeboardViewController: UIViewController {
             self.createInfo()
             self.createContacts()
             self.galleryCollectionView.reloadData()
+            
+            self.logoImageView.layer.cornerRadius = self.logoImageView.frame.size.width/2
+            self.logoImageView.clipsToBounds = true
+            self.logoImageView.layer.borderWidth = 0.5
         }
         
+        if spotImage == "NotFound" {
+            logoImageView.image = UIImage(named: "NotFound")
+        } else {
+        let imageUrl = URL(string: spotImage)
+        let resourses = ImageResource(downloadURL: imageUrl!)
+        let processor = RoundCornerImageProcessor(cornerRadius: logoImageView.frame.size.width/2)
+        logoImageView.kf.indicatorType = .activity
+        logoImageView.kf.setImage(with: resourses, placeholder: nil, options: [.processor(processor)]) { (result) in  }
+        }
         
         navigationItem.title = spotTitle
         
@@ -59,53 +77,53 @@ class DetailWakeboardViewController: UIViewController {
         for i in contactsLabelCollection {
             i.text = ""
         }
-        
-        logoImageView.layer.cornerRadius = 5
-        logoImageView.layer.cornerRadius = logoImageView.frame.size.width / 2
-        
-        let imageUrl = URL(string: spotImage)
-        let imageData = try? Data(contentsOf: imageUrl!)
-        logoImageView.image = UIImage(data: imageData!)
-        
     }
     
     func createInfo() {
-        for i in infoLabelCollection {
-            i.text = ""
-        }
-        
         for (i,j) in zip(infoSpot, infoLabelCollection) {
             j.text = "- \(i)"
         }
     }
     
     func createContacts() {
-        
         for (i,j) in zip(contactsSpot, contactsLabelCollection) {
             j.text = "- \(i)"
         }
-        
     }
     
-
-func location(_ location: String) {
-    geocoder.geocodeAddressString(location) { (placemarks, error)
-        in
-        if error != nil {
-            print(error!)
-        }
-        if placemarks != nil {
-            if let placemark = placemarks?.first {
-                let annotation = MKPointAnnotation()
-                annotation.title = "naspote"
-                annotation.coordinate = placemark.location!.coordinate
+    func resizeFont() {
+        
+        let screenWidth = view.frame.width
+        if screenWidth < CGFloat(400.0) {
+            for i in contactsLabelCollection {
+                i.font = UIFont(name: "Helvetica", size: 8.0)
                 
-                self.locationOutlet.showAnnotations([annotation], animated: true)
-                self.locationOutlet.selectAnnotation(annotation, animated: true)
+            }
+            for i in infoLabelCollection {
+                i.font = UIFont.boldSystemFont(ofSize: 11.0)
             }
         }
     }
-}
+    
+    
+    func location(_ location: String) {
+        geocoder.geocodeAddressString(location) { (placemarks, error)
+            in
+            if error != nil {
+                print(error!)
+            }
+            if placemarks != nil {
+                if let placemark = placemarks?.first {
+                    let annotation = MKPointAnnotation()
+                    annotation.title = "naspote"
+                    annotation.coordinate = placemark.location!.coordinate
+                    
+                    self.locationOutlet.showAnnotations([annotation], animated: true)
+                    self.locationOutlet.selectAnnotation(annotation, animated: true)
+                }
+            }
+        }
+    }
 }
 
 extension DetailWakeboardViewController: DetailSpotManagerDelegate {
@@ -125,8 +143,6 @@ extension DetailWakeboardViewController: DetailSpotManagerDelegate {
 extension DetailWakeboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //        let width = (self.view.frame.size.width - 12 * 3) / 3 //some width
-        //            let height = width * 1.5 //ratio
         return CGSize(width: 240, height: 150)
     }
     
@@ -137,16 +153,14 @@ extension DetailWakeboardViewController: UICollectionViewDelegate, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "galleryCell", for: indexPath) as! DetailWakeboardGalleryCell
         
-        DispatchQueue.global(qos: .utility).async {
-            let image = self.spotGallery[indexPath.row]
-            let imageUrl = URL(string: image)
-            let imageData = try? Data(contentsOf: imageUrl!)
-            
-            DispatchQueue.main.async {
-                
-                cell.galleryImageView.image = UIImage(data: imageData!)
-            }
-        }
+        let image = self.spotGallery[indexPath.row]
+        let downloadImage = URL(string: image)
+        let resourses = ImageResource(downloadURL: downloadImage!)
+        let processor = DownsamplingImageProcessor(size: cell.galleryImageView.bounds.size)
+        
+        cell.galleryImageView.kf.indicatorType = .activity
+        cell.galleryImageView.kf.setImage(with: resourses, placeholder: nil, options: [.processor(processor)]) { (result) in  }
+        
         
         return cell
     }

@@ -20,8 +20,11 @@ class WakeboardCell: UITableViewCell {
         
         spotShadow.makeShadows()
         spotShadow.layer.cornerRadius = 10
-        spotImage.layer.cornerRadius = spotImage.frame.size.width / 2
-        spotImage.layer.borderWidth = 0.5
+        DispatchQueue.main.async {
+        self.spotImage.layer.cornerRadius = 5
+        self.spotImage.layer.cornerRadius = self.spotImage.frame.size.width / 2
+        self.spotImage.layer.borderWidth = 0.5
+        }
     
     }
     

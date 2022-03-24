@@ -23,11 +23,11 @@ struct WakeboardManager {
         var spotTitle = [String]()
         var spotMap = [String]()
         var spotLink = [String]()
-        //    var spotPhone = [String]()
+//        var spotPhone = [String]()
         
         let urlString = "https://naspote.fun/%d0%b2%d0%b5%d0%b9%d0%ba%d0%b1%d0%be%d1%80%d0%b4/"
         if let url = URL(string: urlString) {
-
+            
             do {
                 let htmlString = try String(contentsOf: url, encoding: .utf8)
                 let doc = try SwiftSoup.parse(htmlString)
@@ -59,7 +59,7 @@ struct WakeboardManager {
                         }
                     }
                 }
-            
+                
                 let element2 = try doc.select("div")[134]
                 let map = try element2.select("span").array()
                 for i in map {
@@ -73,22 +73,27 @@ struct WakeboardManager {
                 
                 let link = try element?.select("a")
                 for i in link! {
-                let linkToSpot = try i.attr("href")
+                    let linkToSpot = try i.attr("href")
                     let searchStr = "listing"
                     if linkToSpot.contains(searchStr) {
                         if !spotLink.contains(linkToSpot) {
-                        spotLink.append(linkToSpot)
+                            spotLink.append(linkToSpot)
                         }
                     }
                 }
                 
-                //            let spotPhoneNumber = try element?.select("a").array()
-                //            for i in spotPhoneNumber! {
-                //                let link = try i.text()
-                //                print(link)
-                //                spotPhone.append(link)
-                //            }
-                //            print(spotPhone)
+//                let spotPhoneNumber = try element?.select("a").array()
+//                for i in spotPhoneNumber! {
+//                    let phoneToSpot = try i.attr("href")
+//                    if phoneToSpot.contains("tel") {
+//                        print(phoneToSpot)
+//                    }
+//                    print(phoneToSpot)
+//                    let link = try i.text()
+//                    print(link)
+//                    spotPhone.append(phoneToSpot)
+//                }
+//                print(spotPhone)
                 
                 
                 

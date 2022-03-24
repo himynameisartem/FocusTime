@@ -7,16 +7,14 @@
 
 import UIKit
 import SwiftSoup
+import Kingfisher
 
 class NewsViewController: UITableViewController {
     
     @IBOutlet var sideMenuBtn: UIBarButtonItem!
     
     var newsManager = NewsManager()
-    
-    var newsString = [String]()
-    var newsImage = [String]()
-    var newsLink = [String]()
+    var newsTest = [NewsModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,44 +23,40 @@ class NewsViewController: UITableViewController {
         newsManager.delegate = self
         
         DispatchQueue.main.async {
-            self.sideMenuBtn.target = self.revealViewController()
-            self.sideMenuBtn.action = #selector(self.revealViewController()?.revealSideMenu)
             self.newsManager.fetchNews()
-            self.tableView.reloadData()
         }
+        
+        self.sideMenuBtn.target = self.revealViewController()
+        self.sideMenuBtn.action = #selector(self.revealViewController()?.revealSideMenu)
     }
-
+    
     // MARK: TableView
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsString.count
+        return newsTest.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
         
-        DispatchQueue.global(qos: .utility).async {
-            let image = self.newsImage[indexPath.row]
-            let imageUrl = URL(string: image)
-            let imageData = try? Data(contentsOf: imageUrl!)
-            
-            DispatchQueue.main.async {
-                
-                cell.newsImage.image = UIImage(data: imageData!)
-            }
-        }
+        let image = newsTest[indexPath.row].image
+        let downloadUrl = URL(string: image)
+        let resourse = ImageResource(downloadURL: downloadUrl!)
+        let processor = DownsamplingImageProcessor(size: cell.newsImage.bounds.size)
         
-        cell.newsLabel.text = self.newsString[indexPath.row]
+        cell.newsImage.kf.indicatorType = .activity
+        cell.newsImage.kf.setImage(with: resourse, options: [.processor(processor)])
+        cell.newsLabel.text = newsTest[indexPath.row].title
         
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
-          
+            
             let detailNewsVC = segue.destination as! DetailNewsViewController
-            detailNewsVC.txt = newsLink[indexPath.row]
-            detailNewsVC.img = newsImage[indexPath.row]
+            detailNewsVC.txt = newsTest[indexPath.row].link
+            detailNewsVC.img = newsTest[indexPath.row].image
         }
     }
 }
@@ -70,10 +64,9 @@ class NewsViewController: UITableViewController {
 // MARK: MaagerDelegate
 
 extension NewsViewController: NewsManagerDelegate {
-    func didUpdateNews(news: NewsModel) {
-        self.newsString = news.newsString
-        self.newsImage = news.newsImage
-        self.newsLink = news.newsLink
+    func didUpdateNews(news: [NewsModel]) {
+        self.newsTest = news
+        self.tableView.reloadData()
     }
     
     func didFailWithError(error: Error) {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailNewsViewController: UIViewController {
     
@@ -33,6 +34,7 @@ class DetailNewsViewController: UIViewController {
                 self.newsTxt.text = self.newsString
             }
         newsTxt.showsVerticalScrollIndicator = false
+        newsImg.kf.indicatorType = .activity
         newsImg.image = image
     }
 }

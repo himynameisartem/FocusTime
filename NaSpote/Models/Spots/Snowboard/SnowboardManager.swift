@@ -22,7 +22,7 @@ struct SnowboardManager {
         var spotTitle = [String]()
         var spotMap = [String]()
         var spotLink = [String]()
-        var img = [UIImage]()
+        var img = [String]()
         //    var spotPhone = [String]()
         
         let urlString = "https://naspote.fun/%d0%b3%d0%be%d1%80%d0%bd%d0%be%d0%bb%d1%8b%d0%b6%d0%ba%d0%b8/"
@@ -56,14 +56,10 @@ struct SnowboardManager {
                         let link3 = try spotImg?[imageCount].attr("src")
                         imageCount += 1
                             let imageUrl = URL(string: link3!)
-                            let imageData: Data
                             if imageUrl != nil {
-                                imageData = try! Data(contentsOf: imageUrl!)
-                                let image = UIImage(data: imageData)
-                                img.append(image!)
+                                img.append(link3!)
                             } else {
-                                let image = UIImage(named: "NotFound")
-                                img.append(image!)
+                                img.append("NotFound")
                             }
                     }
                 }

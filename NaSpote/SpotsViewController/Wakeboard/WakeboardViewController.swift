@@ -7,10 +7,13 @@
 
 import UIKit
 import SwiftSoup
+import Kingfisher
 
 class WakeboardViewController: UITableViewController {
     
     @IBOutlet var sideMenuBtn: UIBarButtonItem!
+
+    
     
     var spotManager = WakeboardManager()
     
@@ -37,6 +40,7 @@ class WakeboardViewController: UITableViewController {
         
     }
     
+ 
     
     // MARK: - Table view data source
     
@@ -51,18 +55,14 @@ class WakeboardViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpotIdentifire", for: indexPath) as! WakeboardCell
         
-        DispatchQueue.global(qos: .utility).async {
-            let image = self.spotImage[indexPath.row]
-            let imageUrl = URL(string: image)
-            let imageData = try? Data(contentsOf: imageUrl!)
-            
-            DispatchQueue.main.async {
-                
-                cell.spotImage.image = UIImage(data: imageData!)
-                cell.spotTitle.text = self.spotTitle[indexPath.row]
-                
-            }
-        }
+        let image = spotImage[indexPath.row]
+        let downloadURL = URL(string: image)
+        let resourses = ImageResource(downloadURL: downloadURL!)
+        
+        cell.spotTitle.text = self.spotTitle[indexPath.row]
+        cell.spotImage.kf.indicatorType = .activity
+        cell.spotImage.kf.setImage(with: resourses, placeholder: nil, options: nil) { (result) in }
+        
         cell.mapButton.setTitle(self.spotMap[indexPath.row], for: .normal)
         return cell
     }
@@ -79,7 +79,7 @@ class WakeboardViewController: UITableViewController {
                 mapVC.locationString = self.spotMap[indexPath.row]
             }
         }
-                
+        
         if segue.identifier == "GoToMapVC" {
             let mapVC = segue.destination as! LocationWakeboardViewController
             if let buttonTitle = (sender as? UIButton)?.titleLabel?.text {

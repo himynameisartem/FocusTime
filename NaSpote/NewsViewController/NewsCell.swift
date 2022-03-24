@@ -20,10 +20,10 @@ class NewsCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        shadowView.layer.cornerRadius = 10
-        shadowView.makeShadow()
-        imageCornerRadius()
+        
+            self.shadowView.layer.cornerRadius = 10
+            self.shadowView.makeShadow()
+            self.imageCornerRadius()
     }
 
     func imageCornerRadius() {

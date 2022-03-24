@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 
 struct NewsModel {
-    let newsString: [String]
-    let newsImage: [String]
-    let newsLink: [String]
+    let title: String 
+    let image: String
+    let link: String
 }

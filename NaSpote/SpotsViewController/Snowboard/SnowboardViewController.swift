@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftSoup
+import Kingfisher
 
 class SnowboardViewController: UITableViewController {
     
@@ -17,7 +18,9 @@ class SnowboardViewController: UITableViewController {
     var spotTitle = [String]()
     var spotMap = [String]()
     var spotLink = [String]()
-    var spotImg = [UIImage]()
+    var spotImg = [String]()
+    
+    var snowboardTest = SnowboardModel(spotTitle: [String()], spotMap: [String()], spotLink: [String()], spotImg: [String()])
     
     var spotCell = WakeboardCell()
     
@@ -30,6 +33,7 @@ class SnowboardViewController: UITableViewController {
         DispatchQueue.main.async {
             self.spotManager.fetchSpot()
             self.tableView.reloadData()
+            print(self.snowboardTest.spotImg)
         }
         
         self.sideMenuBtn.target = revealViewController()
@@ -51,28 +55,35 @@ class SnowboardViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpotSnowIdentifire", for: indexPath) as! SnowboardCell
+        let image = spotImg[indexPath.row]
+        print(image)
         
-            DispatchQueue.main.async {
-                cell.spotImage.image = self.spotImg[indexPath.row]
-                cell.spotTitle.text = self.spotTitle[indexPath.row]
-            }
+        cell.spotImage.kf.indicatorType = .activity
+        if image == "NotFound" {
+            cell.spotImage.image = UIImage(named: "NotFound")
+        } else {
+            let downloadUrl = URL(string: image)
+            let resourse = ImageResource(downloadURL: downloadUrl!)
+            let processor = DownsamplingImageProcessor(size: cell.spotImage.bounds.size)
+            cell.spotImage.kf.setImage(with: resourse, placeholder: nil, options: [.processor(processor)]) { (result) in }
+        }
         
-        cell.spotTitle.text = self.spotTitle[indexPath.row]
-        
+        cell.spotTitle.text = self.snowboardTest.spotTitle[indexPath.row]
         cell.mapButton.setTitle(self.spotMap[indexPath.row], for: .normal)
+        
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
-        if segue.identifier == "GoToDetailSnowboardVC"  {
+        if segue.identifier == "GoToDetailVC"  {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let mapVC = segue.destination as! DetailSnowboardViewController
-                mapVC.spotTitle = self.spotTitle[indexPath.row]
-                mapVC.spotLink = self.spotLink[indexPath.row]
-                mapVC.locationString = self.spotMap[indexPath.row]
-                mapVC.spotImage = self.spotImg[indexPath.row]
+                let detailSpotVC = segue.destination as! DetailWakeboardViewController
+                detailSpotVC.spotTitle = self.spotTitle[indexPath.row]
+                detailSpotVC.spotLink = self.spotLink[indexPath.row]
+                detailSpotVC.locationString = self.spotMap[indexPath.row]
+                detailSpotVC.spotImage = self.spotImg[indexPath.row]
             }
         }
         
@@ -92,6 +103,7 @@ extension SnowboardViewController: SpotSnowManagerDelegate {
         self.spotMap = spot.spotMap
         self.spotLink = spot.spotLink
         self.spotImg = spot.spotImg
+        self.snowboardTest = SnowboardModel(spotTitle: spot.spotTitle, spotMap: spot.spotMap, spotLink: spot.spotLink, spotImg: spot.spotImg)
     }
     
     func didFailWithError(error: Error) {
