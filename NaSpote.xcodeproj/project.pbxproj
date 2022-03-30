@@ -27,6 +27,7 @@
 		3117AB98274AB7BB00E7A9EB /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AB97274AB7BB00E7A9EB /* NewsModel.swift */; };
 		3129F85627F429850007D05C /* DetailCampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85527F429850007D05C /* DetailCampModel.swift */; };
 		3129F85827F429920007D05C /* DetailCampManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85727F429920007D05C /* DetailCampManager.swift */; };
+		3129F86027F480B20007D05C /* DetailSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85F27F480B20007D05C /* DetailSpotViewController.swift */; };
 		31368C522780F75A009087BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C512780F75A009087BF /* MainViewController.swift */; };
 		31368C542780F78F009087BF /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C532780F78F009087BF /* SideMenuViewController.swift */; };
 		31368C572780F7C6009087BF /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C562780F7C6009087BF /* SideMenuModel.swift */; };
@@ -76,6 +77,7 @@
 		3117AB97274AB7BB00E7A9EB /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		3129F85527F429850007D05C /* DetailCampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampModel.swift; sourceTree = "<group>"; };
 		3129F85727F429920007D05C /* DetailCampManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampManager.swift; sourceTree = "<group>"; };
+		3129F85F27F480B20007D05C /* DetailSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSpotViewController.swift; sourceTree = "<group>"; };
 		31368C512780F75A009087BF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		31368C532780F78F009087BF /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		31368C562780F7C6009087BF /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
@@ -149,8 +151,8 @@
 		31141971278B015C002986D7 /* Snowboard */ = {
 			isa = PBXGroup;
 			children = (
-				31141972278B0196002986D7 /* SnowboardManager.swift */,
 				31141974278B01A1002986D7 /* SnowboardModel.swift */,
+				31141972278B0196002986D7 /* SnowboardManager.swift */,
 				31141976278B01B0002986D7 /* DetailSnowboardManager.swift */,
 				31141978278B01BE002986D7 /* DetailSnowboardModel.swift */,
 			);
@@ -285,6 +287,7 @@
 			children = (
 				3114196F27878AA3002986D7 /* Wakeboard */,
 				3114197027878AB5002986D7 /* Snowboard */,
+				3129F85F27F480B20007D05C /* DetailSpotViewController.swift */,
 			);
 			path = SpotsViewController;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				3114197E278B0342002986D7 /* SnowboardCell.swift in Sources */,
 				3129F85827F429920007D05C /* DetailCampManager.swift in Sources */,
 				3117AAD3273AADEE00E7A9EB /* AppDelegate.swift in Sources */,
+				3129F86027F480B20007D05C /* DetailSpotViewController.swift in Sources */,
 				31368C802785F294009087BF /* DetailWakeboardManager.swift in Sources */,
 				3129F85627F429850007D05C /* DetailCampModel.swift in Sources */,
 				319864CA27610DDD001837CE /* LocationWakeboardViewController.swift in Sources */,

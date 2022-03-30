@@ -15,6 +15,7 @@ struct DetailWakeboardModel {
 
 
 struct Contacts {
+    let title: String
     let location: String
     let phone: String
     let networks: Networks

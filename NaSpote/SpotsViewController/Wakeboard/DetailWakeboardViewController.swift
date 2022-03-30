@@ -47,7 +47,7 @@ class DetailWakeboardViewController: UIViewController {
         
         
         DispatchQueue.main.async {
-            self.detailSpotManager.delegate = self
+//            self.detailSpotManager.delegate = self
             self.detailSpotManager.fetchSpot(self.spotLink)
             self.createInfo()
             self.createContacts()
@@ -126,19 +126,19 @@ class DetailWakeboardViewController: UIViewController {
     }
 }
 
-extension DetailWakeboardViewController: DetailSpotManagerDelegate {
-    func didUpdateSpot(spot: DetailWakeboardModel) {
-        self.infoSpot = spot.info
-        self.contactsSpot = spot.contacts
-        self.spotGallery = spot.gallery
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error)
-    }
-    
-    
-}
+//extension DetailWakeboardViewController: DetailSpotManagerDelegate {
+//    func didUpdateSpot(spot: DetailWakeboardModel) {
+//        self.infoSpot = spot.info
+//        self.contactsSpot = spot.contacts
+//        self.spotGallery = spot.gallery
+//    }
+//
+//    func didFailWithError(error: Error) {
+//        print(error)
+//    }
+//
+//
+//}
 
 extension DetailWakeboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

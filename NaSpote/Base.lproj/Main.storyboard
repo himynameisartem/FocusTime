@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tod-bA-ZA6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Ab-Yq-KZU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -861,6 +861,42 @@
             </objects>
             <point key="canvasLocation" x="5328" y="2987"/>
         </scene>
+        <!--Detail Spot View Controller-->
+        <scene sceneID="Djz-Ek-QgW">
+            <objects>
+                <tableViewController id="Wpg-n8-2cm" customClass="DetailSpotViewController" customModule="NaSpote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="qwc-um-934">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="a4B-d2-wCM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="logo" rowHeight="100" id="xNx-Dm-xhU">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xNx-Dm-xhU" id="qqg-Z7-BMd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Wpg-n8-2cm" id="SRd-oz-iUg"/>
+                            <outlet property="delegate" destination="Wpg-n8-2cm" id="wbY-np-4pJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="YLz-xU-IdZ"/>
+                    <connections>
+                        <outlet property="logoCell" destination="xNx-Dm-xhU" id="OuG-EW-VxQ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzB-JQ-XD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8813.04347826087" y="2665.8482142857142"/>
+        </scene>
         <!--Lcation Snowboard View Controller-->
         <scene sceneID="vl3-Wz-CKM">
             <objects>
@@ -930,6 +966,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5Y-Mc-0XB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5328" y="2280"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fYR-57-XSp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ab-Yq-KZU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VCD-Se-Gza">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wpg-n8-2cm" kind="relationship" relationship="rootViewController" id="cu6-fJ-cep"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4U-8F-LCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7902.898550724638" y="2665.8482142857142"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

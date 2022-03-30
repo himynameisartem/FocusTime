@@ -9,7 +9,7 @@ import Foundation
 import SwiftSoup
 
 protocol DetailSpotManagerDelegate {
-    func didUpdateSpot(spot: DetailWakeboardModel)
+    func didUpdateSpot(spot: [Contacts])
     func didFailWithError(error: Error)
 }
 
@@ -23,6 +23,7 @@ struct DetailWakeboardManager {
         var detailSpotContacts = [String]()
         var spotGallery = [String]()
         
+        var detailSpot = [Contacts]()
         
         if let url = URL(string: url) {
             
@@ -34,6 +35,10 @@ struct DetailWakeboardManager {
                 for i in div {
                     let html = try i.select("div.drts-bs-list-group-item")
                     let htmlPhone = try i.select("a")
+                    
+                    // MARK: Title
+                    
+                    let title = try doc.select("div.drts-display-element-entity_field_post_title-1").select("a").attr("title")
                     
                     // MARK: Location
                     
@@ -84,7 +89,6 @@ struct DetailWakeboardManager {
                         catch let error {
                             print(error)
                         }
-                        print(Networks(website: website, instagram: instagram, vk: vk))
                         return Networks(website: website, instagram: instagram, vk: vk)
                     }
                     
@@ -175,7 +179,7 @@ struct DetailWakeboardManager {
                         gallery.append(photo)
                     }
                     
-                    print(Contacts(location: location, phone: phone, networks: networks, raiting: Raiting(average: average, count: count), weekday: weekday, weekend: weekend, setDuration: setDuration, workingHours: workingHours, services: services, gallery: gallery))
+                    detailSpot.append(Contacts(title: title, location: location, phone: phone, networks: networks, raiting: Raiting(average: average, count: count), weekday: weekday, weekend: weekend, setDuration: setDuration, workingHours: workingHours, services: services, gallery: gallery))
                 }
                 
                 
@@ -225,7 +229,7 @@ struct DetailWakeboardManager {
                 detailSpotInfo.removeFirst()
                 detailSpotContacts.removeFirst()
                 
-                let detailSpot = DetailWakeboardModel(info: detailSpotInfo, contacts: detailSpotContacts, gallery: spotGallery)
+//                let detailSpot = DetailWakeboardModel(info: detailSpotInfo, contacts: detailSpotContacts, gallery: spotGallery)
                 self.delegate?.didUpdateSpot(spot: detailSpot)
                 
             } catch let error {
