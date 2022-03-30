@@ -25,6 +25,8 @@
 		3117AAE2273AADF000E7A9EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3117AAE0273AADF000E7A9EB /* LaunchScreen.storyboard */; };
 		3117AB95274AACE100E7A9EB /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AB94274AACE100E7A9EB /* NewsManager.swift */; };
 		3117AB98274AB7BB00E7A9EB /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AB97274AB7BB00E7A9EB /* NewsModel.swift */; };
+		3129F85627F429850007D05C /* DetailCampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85527F429850007D05C /* DetailCampModel.swift */; };
+		3129F85827F429920007D05C /* DetailCampManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85727F429920007D05C /* DetailCampManager.swift */; };
 		31368C522780F75A009087BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C512780F75A009087BF /* MainViewController.swift */; };
 		31368C542780F78F009087BF /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C532780F78F009087BF /* SideMenuViewController.swift */; };
 		31368C572780F7C6009087BF /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C562780F7C6009087BF /* SideMenuModel.swift */; };
@@ -35,6 +37,8 @@
 		31368C842785F2D0009087BF /* DetailWakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */; };
 		319864C627609FAE001837CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319864C527609FAE001837CE /* MapKit.framework */; };
 		319864CA27610DDD001837CE /* LocationWakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319864C927610DDD001837CE /* LocationWakeboardViewController.swift */; };
+		31B9AE5327F30DDE00489667 /* CampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9AE5227F30DDE00489667 /* CampModel.swift */; };
+		31B9AE5527F30DF800489667 /* CampManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9AE5427F30DF800489667 /* CampManager.swift */; };
 		31BC9D72275A5B2F00A7B474 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D71275A5B2F00A7B474 /* NewsViewController.swift */; };
 		31BC9D78275BCEC900A7B474 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D77275BCEC900A7B474 /* NewsCell.swift */; };
 		31BC9D7A275BDC0C00A7B474 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D79275BDC0C00A7B474 /* DetailNewsViewController.swift */; };
@@ -70,6 +74,8 @@
 		3117AAE3273AADF000E7A9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3117AB94274AACE100E7A9EB /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		3117AB97274AB7BB00E7A9EB /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		3129F85527F429850007D05C /* DetailCampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampModel.swift; sourceTree = "<group>"; };
+		3129F85727F429920007D05C /* DetailCampManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampManager.swift; sourceTree = "<group>"; };
 		31368C512780F75A009087BF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		31368C532780F78F009087BF /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		31368C562780F7C6009087BF /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
@@ -80,6 +86,8 @@
 		31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardViewController.swift; sourceTree = "<group>"; };
 		319864C527609FAE001837CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		319864C927610DDD001837CE /* LocationWakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWakeboardViewController.swift; sourceTree = "<group>"; };
+		31B9AE5227F30DDE00489667 /* CampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampModel.swift; sourceTree = "<group>"; };
+		31B9AE5427F30DF800489667 /* CampManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampManager.swift; sourceTree = "<group>"; };
 		31BC9D71275A5B2F00A7B474 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		31BC9D77275BCEC900A7B474 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		31BC9D79275BDC0C00A7B474 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +224,7 @@
 				31368C552780F7A2009087BF /* SideMenu */,
 				3117AB96274AACE600E7A9EB /* News */,
 				31141981278F5CCA002986D7 /* Spots */,
+				31B9AE5127F30DA200489667 /* Camp */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,10 +232,10 @@
 		3117AB96274AACE600E7A9EB /* News */ = {
 			isa = PBXGroup;
 			children = (
-				3117AB94274AACE100E7A9EB /* NewsManager.swift */,
 				3117AB97274AB7BB00E7A9EB /* NewsModel.swift */,
-				31BC9D7B275BF44F00A7B474 /* DetailNewsManager.swift */,
+				3117AB94274AACE100E7A9EB /* NewsManager.swift */,
 				31BC9D7D275BFBB000A7B474 /* DetailNewsModel.swift */,
+				31BC9D7B275BF44F00A7B474 /* DetailNewsManager.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -248,6 +257,17 @@
 				31368C562780F7C6009087BF /* SideMenuModel.swift */,
 			);
 			name = SideMenu;
+			sourceTree = "<group>";
+		};
+		31B9AE5127F30DA200489667 /* Camp */ = {
+			isa = PBXGroup;
+			children = (
+				31B9AE5227F30DDE00489667 /* CampModel.swift */,
+				31B9AE5427F30DF800489667 /* CampManager.swift */,
+				3129F85527F429850007D05C /* DetailCampModel.swift */,
+				3129F85727F429920007D05C /* DetailCampManager.swift */,
+			);
+			path = Camp;
 			sourceTree = "<group>";
 		};
 		31BC9D70275A5B0700A7B474 /* NewsViewController */ = {
@@ -272,10 +292,10 @@
 		31BC9D84275CE5E500A7B474 /* Wakeboard */ = {
 			isa = PBXGroup;
 			children = (
-				31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */,
 				31BC9D87275CE60700A7B474 /* WakeboardModel.swift */,
-				31368C7F2785F294009087BF /* DetailWakeboardManager.swift */,
+				31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */,
 				31368C812785F29D009087BF /* DetailWakeboardModel.swift */,
+				31368C7F2785F294009087BF /* DetailWakeboardManager.swift */,
 			);
 			path = Wakeboard;
 			sourceTree = "<group>";
@@ -404,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B9AE5327F30DDE00489667 /* CampModel.swift in Sources */,
 				3117AB98274AB7BB00E7A9EB /* NewsModel.swift in Sources */,
 				31BC9D72275A5B2F00A7B474 /* NewsViewController.swift in Sources */,
 				3114196D27876931002986D7 /* DetailWakeboardGalleryCell.swift in Sources */,
@@ -412,8 +433,10 @@
 				31BC9D78275BCEC900A7B474 /* NewsCell.swift in Sources */,
 				31BC9D83275CE55000A7B474 /* WakeboardCell.swift in Sources */,
 				3114197E278B0342002986D7 /* SnowboardCell.swift in Sources */,
+				3129F85827F429920007D05C /* DetailCampManager.swift in Sources */,
 				3117AAD3273AADEE00E7A9EB /* AppDelegate.swift in Sources */,
 				31368C802785F294009087BF /* DetailWakeboardManager.swift in Sources */,
+				3129F85627F429850007D05C /* DetailCampModel.swift in Sources */,
 				319864CA27610DDD001837CE /* LocationWakeboardViewController.swift in Sources */,
 				31141979278B01BE002986D7 /* DetailSnowboardModel.swift in Sources */,
 				31141983278F63B9002986D7 /* DetailSnowboardViewController.swift in Sources */,
@@ -424,6 +447,7 @@
 				31BC9D88275CE60700A7B474 /* WakeboardModel.swift in Sources */,
 				3114197C278B02BF002986D7 /* SnowboardViewController.swift in Sources */,
 				31368C542780F78F009087BF /* SideMenuViewController.swift in Sources */,
+				31B9AE5527F30DF800489667 /* CampManager.swift in Sources */,
 				31BC9D7A275BDC0C00A7B474 /* DetailNewsViewController.swift in Sources */,
 				31BC9D7E275BFBB000A7B474 /* DetailNewsModel.swift in Sources */,
 				31141973278B0196002986D7 /* SnowboardManager.swift in Sources */,

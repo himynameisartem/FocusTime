@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import UIKit
-
 
 struct NewsModel {
     let title: String 

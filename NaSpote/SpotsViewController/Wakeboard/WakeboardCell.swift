@@ -13,6 +13,7 @@ class WakeboardCell: UITableViewCell {
     @IBOutlet var spotShadow: UIView!
     @IBOutlet var mapButton: UIButton!
     @IBOutlet var spotImage: UIImageView!
+    @IBOutlet var spotPhone: UILabel!
     
     override func awakeFromNib() {
         

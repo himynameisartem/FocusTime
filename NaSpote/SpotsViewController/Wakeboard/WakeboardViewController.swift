@@ -13,15 +13,9 @@ class WakeboardViewController: UITableViewController {
     
     @IBOutlet var sideMenuBtn: UIBarButtonItem!
 
-    
-    
     var spotManager = WakeboardManager()
-    
-    var spotImage = [String]()
-    var spotTitle = [String]()
-    var spotMap = [String]()
-    var spotLink = [String]()
-    
+    var wakeboard = [WakeboardModelTest]()
+
     var spotCell = WakeboardCell()
     
     override func viewDidLoad() {
@@ -32,7 +26,6 @@ class WakeboardViewController: UITableViewController {
         
         DispatchQueue.main.async {
             self.spotManager.fetchSpot()
-            self.tableView.reloadData()
         }
         
         self.sideMenuBtn.target = revealViewController()
@@ -46,7 +39,7 @@ class WakeboardViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return spotImage.count
+        return wakeboard.count
     }
     
     @IBAction func mapTouch(_ sender: UIButton) {
@@ -55,28 +48,27 @@ class WakeboardViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpotIdentifire", for: indexPath) as! WakeboardCell
         
-        let image = spotImage[indexPath.row]
+        let image = wakeboard[indexPath.row].image
         let downloadURL = URL(string: image)
         let resourses = ImageResource(downloadURL: downloadURL!)
         
-        cell.spotTitle.text = self.spotTitle[indexPath.row]
         cell.spotImage.kf.indicatorType = .activity
         cell.spotImage.kf.setImage(with: resourses, placeholder: nil, options: nil) { (result) in }
+        cell.spotTitle.text = wakeboard[indexPath.row].title
+        cell.mapButton.setTitle(wakeboard[indexPath.row].location, for: .normal)
+        cell.spotPhone.text = wakeboard[indexPath.row].phone
         
-        cell.mapButton.setTitle(self.spotMap[indexPath.row], for: .normal)
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
         if segue.identifier == "GoToDetailSpotVC"  {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let mapVC = segue.destination as! DetailWakeboardViewController
-                mapVC.spotTitle = self.spotTitle[indexPath.row]
-                mapVC.spotLink = self.spotLink[indexPath.row]
-                mapVC.spotImage = self.spotImage[indexPath.row]
-                mapVC.locationString = self.spotMap[indexPath.row]
+                mapVC.spotTitle = wakeboard[indexPath.row].title
+                mapVC.spotLink = wakeboard[indexPath.row].link
+                mapVC.spotImage = wakeboard[indexPath.row].image
+                mapVC.locationString = wakeboard[indexPath.row].location
             }
         }
         
@@ -84,19 +76,15 @@ class WakeboardViewController: UITableViewController {
             let mapVC = segue.destination as! LocationWakeboardViewController
             if let buttonTitle = (sender as? UIButton)?.titleLabel?.text {
                 mapVC.locationString = buttonTitle
-                
             }
-            
         }
     }
 }
 
 extension WakeboardViewController: SpotManagerDelegate {
-    func didUpdateNews(spot: WakeboardModel) {
-        self.spotImage = spot.spotImage
-        self.spotTitle = spot.spotTitle
-        self.spotMap = spot.spotMap
-        self.spotLink = spot.spotLink
+    func didUpdateNews(spot: [WakeboardModelTest]) {
+        wakeboard = spot
+        self.tableView.reloadData()
     }
     
     func didFailWithError(error: Error) {

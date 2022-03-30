@@ -7,9 +7,17 @@
 
 import Foundation
 
-struct WakeboardModel {
-    let spotImage: [String]
-    let spotTitle: [String]
-    let spotMap: [String]
-    let spotLink: [String]
+struct WakeboardModelTest {
+    let image: String
+    let title: String
+    let type: String
+    let phone: String
+    let location: String
+    let link: String
+    let raiting: Raiting
+}
+
+struct Raiting {
+    let average: Double
+    let count : Int
 }

@@ -7,9 +7,7 @@
 
 import Foundation
 import SwiftSoup
-import UIKit
-import Kingfisher
-import SwiftUI
+
 
 protocol NewsManagerDelegate {
     func didUpdateNews(news: [NewsModel])
@@ -22,7 +20,7 @@ struct NewsManager {
     
     func fetchNews() {
         
-        var newsArray = [NewsModel]()
+        var news = [NewsModel]()
         
         let urlString = "https://naspote.fun"
         if let url = URL(string: urlString) {
@@ -41,12 +39,8 @@ struct NewsManager {
                     let link = try  html.attr("href")
                     let image = try htmlImg.attr("src")
                     
-                    newsArray.append(NewsModel(title: title, image: image, link: link))
+                    news.append(NewsModel(title: title, image: image, link: link))
                 }
-                
-                
-                
-                let news = newsArray
                 self.delegate?.didUpdateNews(news: news)
             } catch let error {
                 print(error)
