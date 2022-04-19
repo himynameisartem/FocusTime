@@ -9,7 +9,7 @@ import Foundation
 import SwiftSoup
 
 protocol DetailSpotManagerDelegate {
-    func didUpdateSpot(spot: [Contacts])
+    func didUpdateSpot(spot: DetailWakeboardModel)
     func didFailWithError(error: Error)
 }
 
@@ -229,7 +229,7 @@ struct DetailWakeboardManager {
                 detailSpotInfo.removeFirst()
                 detailSpotContacts.removeFirst()
                 
-//                let detailSpot = DetailWakeboardModel(info: detailSpotInfo, contacts: detailSpotContacts, gallery: spotGallery)
+                let detailSpot = DetailWakeboardModel(info: detailSpotInfo, contacts: detailSpotContacts, gallery: spotGallery)
                 self.delegate?.didUpdateSpot(spot: detailSpot)
                 
             } catch let error {

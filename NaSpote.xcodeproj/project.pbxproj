@@ -49,6 +49,7 @@
 		31BC9D83275CE55000A7B474 /* WakeboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D82275CE55000A7B474 /* WakeboardCell.swift */; };
 		31BC9D86275CE5FA00A7B474 /* WakeboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */; };
 		31BC9D88275CE60700A7B474 /* WakeboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D87275CE60700A7B474 /* WakeboardModel.swift */; };
+		31E6B79428095A2500AB7B0E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6B79328095A2500AB7B0E /* ContainerViewController.swift */; };
 		95817E1F5502E19ADB534B32 /* Pods_NaSpote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023DF0BFF193E97D87695B6A /* Pods_NaSpote.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		31BC9D82275CE55000A7B474 /* WakeboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardCell.swift; sourceTree = "<group>"; };
 		31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardManager.swift; sourceTree = "<group>"; };
 		31BC9D87275CE60700A7B474 /* WakeboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardModel.swift; sourceTree = "<group>"; };
+		31E6B79328095A2500AB7B0E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		503B60BCCCF21F93EA187164 /* Pods-NaSpote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaSpote.debug.xcconfig"; path = "Target Support Files/Pods-NaSpote/Pods-NaSpote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,6 +290,7 @@
 				3114196F27878AA3002986D7 /* Wakeboard */,
 				3114197027878AB5002986D7 /* Snowboard */,
 				3129F85F27F480B20007D05C /* DetailSpotViewController.swift */,
+				31E6B79328095A2500AB7B0E /* ContainerViewController.swift */,
 			);
 			path = SpotsViewController;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				3129F85827F429920007D05C /* DetailCampManager.swift in Sources */,
 				3117AAD3273AADEE00E7A9EB /* AppDelegate.swift in Sources */,
 				3129F86027F480B20007D05C /* DetailSpotViewController.swift in Sources */,
+				31E6B79428095A2500AB7B0E /* ContainerViewController.swift in Sources */,
 				31368C802785F294009087BF /* DetailWakeboardManager.swift in Sources */,
 				3129F85627F429850007D05C /* DetailCampModel.swift in Sources */,
 				319864CA27610DDD001837CE /* LocationWakeboardViewController.swift in Sources */,
@@ -540,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -595,7 +599,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -614,6 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZU66MWZY7;
 				INFOPLIST_FILE = NaSpote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -634,6 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZU66MWZY7;
 				INFOPLIST_FILE = NaSpote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
