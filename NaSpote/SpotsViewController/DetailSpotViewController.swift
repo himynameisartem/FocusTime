@@ -7,32 +7,22 @@
 
 import UIKit
 import MapKit
+import Kingfisher
+import Hero
 
-protocol showHideButtons {
-    
-    func didUpdateScrollPosition(position: Int)
-    
-}
 
 class DetailSpotViewController: UITableViewController {
     
-    var delegate: showHideButtons?
+    var contacts: Contacts!
     
-    let spotGalleryArray = ["funwake1", "funwake2", "funwake3", "funwake4"]
-    let infoArray = ["Реверсивная лебедка",
-                     "Оплата картой",
-                     "Душ",
-                     "Кафе",
-                     "Wi-Fi",
-                     "Батут",
-                     "Кольцевая лебедка",
-                     "Парковка",
-                     "Сауна/Баня",
-                     "Бар",
-                     "Номера"]
-    
+    var detailWakeboarManager = DetailWakeboardManager()
     
     @IBOutlet var logoCell: UITableViewCell!
+    @IBOutlet var contactsCell: UITableViewCell!
+    @IBOutlet var galleryCell: UITableViewCell!
+    @IBOutlet var infoCell: UITableViewCell!
+    @IBOutlet var locationCell: UITableViewCell!
+    
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var logo: UIImageView!
@@ -53,61 +43,120 @@ class DetailSpotViewController: UITableViewController {
     @IBOutlet var location: MKMapView!
     
     var positionScroll = CGPoint()
-    let count = 14
-
+    let geocoder = CLGeocoder()
+    
+    var logoString = String()
+    var link = String()
+    var test = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hero.isEnabled = true
+        tableView.heroID = "spot"
+
         spotGallery.delegate = self
         spotGallery.dataSource = self
+        detailWakeboarManager.delegate = self
         
-        logoCellConfiguration()
-        contactCellConfiguration()
-        infoCellConfiguration()
-        logoCellConfiguration()
-        tableView.reloadData()
-        
-        delegate?.didUpdateScrollPosition(position: count)
         
 
-    }
-    
-    func delgetevc() {
-        delegate?.didUpdateScrollPosition(position: count)
+            detailWakeboarManager.fetchSpot(link)
+            
+
+                logoCellConfiguration()
+                logoCellConfiguration()
+               infoCellConfiguration()
+                contactCellConfiguration()
+                location(contacts.location)
+
+        
+        
+        tableView.reloadData()
+        
+        location.layer.borderWidth = 0.3
+        
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     func logoCellConfiguration() {
-        titleLabel.text = "FunWake 33"
+        
+        titleLabel.text = contacts.title
         titleLabel.font = .boldSystemFont(ofSize: 25)
         logo.layer.cornerRadius = logo.frame.height / 2
-
+        logo.layer.borderWidth = 0.5
         logo.layer.masksToBounds = true
-        logo.image = UIImage(named: "funwake5")
+        //        logo.image = UIImage(named: "funwake5")
+        
+        let image = logoString
+        let downloadImage = URL(string: image)
+        let resourses = ImageResource(downloadURL: downloadImage!)
+        let processor = DownsamplingImageProcessor(size: logo.bounds.size)
+        
+        logo.kf.indicatorType = .activity
+        logo.kf.setImage(with: resourses, placeholder: nil, options: [.processor(processor)]) { (result) in  }
+        
     }
     
     func contactCellConfiguration() {
         
-        weekdayTitle.text = "Цена за сет в будни" + ":"
-        weekdayContent.text = "500,00 RUB"
-        weekendTitle.text = "Цена за сет в выходные" + ":"
-        weekendContent.text = "500,00 RUB"
-        setDurationTitle.text = "Длительность сета" + ":"
-        setDurationContent.text = "10 минут"
-        workHoursTitle.text = "Время работы" + ":"
-        workHoursContent.text = "по будням: с 10:00 до 22:00 выходные: с 10.00 до 22.00"
+        
+        
+        weekdayTitle.isHidden = true
+        weekdayContent.isHidden = true
+        weekendTitle.isHidden = true
+        weekendContent.isHidden = true
+        setDurationTitle.isHidden = true
+        setDurationContent.isHidden = true
+        workHoursTitle.isHidden = true
+        workHoursContent.isHidden = true
+        
+        if !contacts.weekday.title.isEmpty {
+            weekdayTitle.isHidden = false
+            weekdayTitle.text = contacts.weekday.title
+            weekdayContent.isHidden = false
+            weekdayContent.text = contacts.weekday.price
+        }
+        
+        
+        if !contacts.weekend.title.isEmpty {
+            weekendTitle.isHidden = false
+            weekendTitle.text = contacts.weekend.title
+            weekendContent.isHidden = false
+            weekendContent.text = contacts.weekend.price
+        }
+        
+        if !contacts.setDuration.title.isEmpty {
+            setDurationTitle.isHidden = false
+            setDurationTitle.text = contacts.setDuration.title
+            setDurationContent.isHidden = false
+            setDurationContent.text = contacts.setDuration.duration
+        }
+        
+        
+        if  !contacts.workingHours.title.isEmpty {
+            workHoursTitle.isHidden = false
+            workHoursTitle.text = contacts.workingHours.title
+            workHoursContent.isHidden = false
+            workHoursContent.text = contacts.workingHours.hours
+        }
         
     }
     
     func infoCellConfiguration() {
         
         for i in info {
-            i.text = ""
             i.font = .boldSystemFont(ofSize: 13.0)
+            i.isHidden = true
         }
         
-        for (i, j) in zip(info, infoArray) {
-            i.text = j
+        for (i, j) in zip(info, contacts.services) {
+            if j != "" {
+                i.isHidden = false
+                i.text = j
+            } else {
+                i.isHidden = true
+            }
         }
     }
     
@@ -123,7 +172,12 @@ class DetailSpotViewController: UITableViewController {
         return 0
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
 }
+
 
 
 extension DetailSpotViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -133,22 +187,22 @@ extension DetailSpotViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return spotGalleryArray.count
+        return contacts.gallery.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "galleryCell", for: indexPath) as! DetailWakeboardGalleryCell
         
-//        let image = self.spotGallery[indexPath.row]
-//        let downloadImage = URL(string: image)
-//        let resourses = ImageResource(downloadURL: downloadImage!)
-//        let processor = DownsamplingImageProcessor(size: cell.galleryImageView.bounds.size)
-//
-//        cell.galleryImageView.kf.indicatorType = .activity
-//        cell.galleryImageView.kf.setImage(with: resourses, placeholder: nil, options: [.processor(processor)]) { (result) in  }
-//
+
+            let image = self.contacts.gallery[indexPath.row]
+            let downloadImage = URL(string: image)
+            let resourses = ImageResource(downloadURL: downloadImage!)
+            let processor = DownsamplingImageProcessor(size: cell.galleryImageView.bounds.size)
+            
+            cell.galleryImageView.kf.indicatorType = .activity
+            cell.galleryImageView.kf.setImage(with: resourses, placeholder: nil, options: [.processor(processor)]) { (result) in  }
+
         
-        cell.galleryImageView.image = UIImage(named: self.spotGalleryArray[indexPath.row])
         
         return cell
     }
@@ -157,26 +211,55 @@ extension DetailSpotViewController: UICollectionViewDelegate, UICollectionViewDa
 
 extension DetailSpotViewController {
     
-
+    
     
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-            positionScroll = scrollView.contentOffset
- 
-        var position = Bool()
-//        print(velocity.y)
-
-        
-//        self.delegate?.didUpdateScrollPosition(position: scrollView.contentOffset.y)
+        positionScroll = scrollView.contentOffset
         
         if positionScroll.y < 0 {
-            position = true
             NotificationCenter.default.post(name: Notification.Name("false"), object: nil)
         } else {
-            position = false
             NotificationCenter.default.post(name: Notification.Name("true"), object: nil)
         }
-
+        
         tableView.reloadData()
     }
-
+    
 }
+
+extension DetailSpotViewController: DetailSpotManagerDelegate {
+    func didUpdateSpot(spot: Contacts) {
+        self.contacts = spot
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
+    
+}
+
+extension DetailSpotViewController {
+    
+    func location(_ location: String) {
+        geocoder.geocodeAddressString(location) { (placemarks, error)
+            in
+            if error != nil {
+                print(error!)
+            }
+            if placemarks != nil {
+                if let placemark = placemarks?.first {
+                    let annotation = MKPointAnnotation()
+                    annotation.title = "naspote"
+                    annotation.coordinate = placemark.location!.coordinate
+                    
+                    self.location.showAnnotations([annotation], animated: true)
+                    self.location.selectAnnotation(annotation, animated: true)
+                }
+            }
+        }
+    }
+}
+
+
+

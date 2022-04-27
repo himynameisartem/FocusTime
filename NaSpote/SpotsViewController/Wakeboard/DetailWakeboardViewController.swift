@@ -46,18 +46,18 @@ class DetailWakeboardViewController: UIViewController {
         resizeFont()
         
         
-        DispatchQueue.main.async {
-            self.detailSpotManager.delegate = self
-            self.detailSpotManager.fetchSpot(self.spotLink)
-            self.createInfo()
-            self.createContacts()
-            self.galleryCollectionView.reloadData()
-            
-            self.logoImageView.layer.cornerRadius = self.logoImageView.frame.size.width/2
-            self.logoImageView.clipsToBounds = true
-            self.logoImageView.layer.borderWidth = 0.5
-        }
-        
+//        DispatchQueue.main.async {
+//            self.detailSpotManager.delegate = self
+//            self.detailSpotManager.fetchSpot(self.spotLink)
+//            self.createInfo()
+//            self.createContacts()
+//            self.galleryCollectionView.reloadData()
+//            
+//            self.logoImageView.layer.cornerRadius = self.logoImageView.frame.size.width/2
+//            self.logoImageView.clipsToBounds = true
+//            self.logoImageView.layer.borderWidth = 0.5
+//        }
+//        
         if spotImage == "NotFound" {
             logoImageView.image = UIImage(named: "NotFound")
         } else {
@@ -126,20 +126,20 @@ class DetailWakeboardViewController: UIViewController {
     }
 }
 
-extension DetailWakeboardViewController: DetailSpotManagerDelegate {
-    
-    func didUpdateSpot(spot: DetailWakeboardModel) {
-        self.infoSpot = spot.info
-        self.contactsSpot = spot.contacts
-        self.spotGallery = spot.gallery
-    }
-
-    func didFailWithError(error: Error) {
-        print(error)
-    }
-
-
-}
+//extension DetailWakeboardViewController: DetailSpotManagerDelegate {
+//
+//    func didUpdateSpot(spot: DetailWakeboardModel) {
+//        self.infoSpot = spot.info
+//        self.contactsSpot = spot.contacts
+//        self.spotGallery = spot.gallery
+//    }
+//
+//    func didFailWithError(error: Error) {
+//        print(error)
+//    }
+//
+//
+//}
 
 extension DetailWakeboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

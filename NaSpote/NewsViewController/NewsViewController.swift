@@ -15,6 +15,7 @@ class NewsViewController: UITableViewController {
     
     var newsManager = NewsManager()
     var newsTest = [NewsModel]()
+    var newsCell = NewsCell()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,9 @@ class NewsViewController: UITableViewController {
         self.sideMenuBtn.action = #selector(self.revealViewController()?.revealSideMenu)
     }
     
-    // MARK: TableView
+    
+    
+    // MARK: - TableView
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsTest.count
@@ -43,13 +46,20 @@ class NewsViewController: UITableViewController {
         let downloadUrl = URL(string: image)
         let resourse = ImageResource(downloadURL: downloadUrl!)
         let processor = DownsamplingImageProcessor(size: cell.newsImage.bounds.size)
-        
+
         cell.newsImage.kf.indicatorType = .activity
         cell.newsImage.kf.setImage(with: resourse, options: [.processor(processor)])
         cell.newsLabel.text = newsTest[indexPath.row].title
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        
+    }
+    
+    // MARK: - Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
@@ -61,7 +71,7 @@ class NewsViewController: UITableViewController {
     }
 }
 
-// MARK: MaagerDelegate
+// MARK: - MaagerDelegate
 
 extension NewsViewController: NewsManagerDelegate {
     func didUpdateNews(news: [NewsModel]) {

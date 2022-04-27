@@ -6,44 +6,53 @@
 //
 
 import UIKit
+import Hero
 
 class NewsCell: UITableViewCell {
     
     @IBOutlet var newsImage: UIImageView!
     @IBOutlet var newsLabel: UILabel!
+    @IBOutlet var blur: UIVisualEffectView!
     @IBOutlet var shadowView: UIView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        
+        shadowView.makeShadow()
+        
+        newsImage.heroID = "imageNews"
+        newsLabel.heroID = "txtNews"
+        blur.heroID = "imageNews"
+        
+        newsLabel.textColor = .white
+        newsImage.layer.cornerRadius = 10
+        newsImage.layer.shadowOpacity = 1
+        newsImage.layer.shadowRadius = 10
+        
+        DispatchQueue.main.async {
+            self.imageCornerRadius()
+        }
+        
+        
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-            self.shadowView.layer.cornerRadius = 10
-            self.shadowView.makeShadow()
-            self.imageCornerRadius()
-    }
-
     func imageCornerRadius() {
-        let path = UIBezierPath(roundedRect:newsImage.bounds,
-                                byRoundingCorners:[.topRight, .topLeft],
+        let path = UIBezierPath(roundedRect: blur.bounds,
+                                byRoundingCorners:[.bottomRight, .bottomLeft],
                                 cornerRadii: CGSize(width: 10, height:  10))
-
         let maskLayer = CAShapeLayer()
-
         maskLayer.path = path.cgPath
-        newsImage.layer.mask = maskLayer
-
+        blur.layer.mask = maskLayer
     }
 }
 
 extension UIView {
     func makeShadow() {
         self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowOpacity = 0.7
-        self.layer.shadowOffset = CGSize(width: 1, height: 1)
-        self.layer.shadowRadius = 13
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowRadius = 5
     }
 }

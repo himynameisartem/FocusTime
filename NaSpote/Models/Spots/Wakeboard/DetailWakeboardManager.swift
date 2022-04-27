@@ -9,7 +9,7 @@ import Foundation
 import SwiftSoup
 
 protocol DetailSpotManagerDelegate {
-    func didUpdateSpot(spot: DetailWakeboardModel)
+    func didUpdateSpot(spot: Contacts)
     func didFailWithError(error: Error)
 }
 
@@ -24,6 +24,8 @@ struct DetailWakeboardManager {
         var spotGallery = [String]()
         
         var detailSpot = [Contacts]()
+        
+        var contacts: Contacts?
         
         if let url = URL(string: url) {
             
@@ -180,20 +182,12 @@ struct DetailWakeboardManager {
                     }
                     
                     detailSpot.append(Contacts(title: title, location: location, phone: phone, networks: networks, raiting: Raiting(average: average, count: count), weekday: weekday, weekend: weekend, setDuration: setDuration, workingHours: workingHours, services: services, gallery: gallery))
+                    
+                    contacts = Contacts(title: title, location: location, phone: phone, networks: networks, raiting: Raiting(average: average, count: count), weekday: weekday, weekend: weekend, setDuration: setDuration, workingHours: workingHours, services: services, gallery: gallery)
+                    
                 }
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+
                 
                 let element = try doc.select("div.drts-row")[1]
                 
@@ -229,8 +223,8 @@ struct DetailWakeboardManager {
                 detailSpotInfo.removeFirst()
                 detailSpotContacts.removeFirst()
                 
-                let detailSpot = DetailWakeboardModel(info: detailSpotInfo, contacts: detailSpotContacts, gallery: spotGallery)
-                self.delegate?.didUpdateSpot(spot: detailSpot)
+                
+                self.delegate?.didUpdateSpot(spot: contacts!)
                 
             } catch let error {
                 print(error)

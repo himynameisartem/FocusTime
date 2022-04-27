@@ -278,8 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				31BC9D71275A5B2F00A7B474 /* NewsViewController.swift */,
-				31BC9D77275BCEC900A7B474 /* NewsCell.swift */,
 				31BC9D79275BDC0C00A7B474 /* DetailNewsViewController.swift */,
+				31BC9D77275BCEC900A7B474 /* NewsCell.swift */,
 			);
 			path = NewsViewController;
 			sourceTree = "<group>";

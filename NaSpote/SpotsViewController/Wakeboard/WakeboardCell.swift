@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 class WakeboardCell: UITableViewCell {
     
@@ -19,8 +20,12 @@ class WakeboardCell: UITableViewCell {
         
         super.awakeFromNib()
         
-        spotShadow.makeShadows()
+        spotShadow.heroID = "spot"
+        
+        spotShadow.makeSnowShadows()
         spotShadow.layer.cornerRadius = 10
+        spotShadow.layer.borderWidth = 0.3
+        
         DispatchQueue.main.async {
         self.spotImage.layer.cornerRadius = 5
         self.spotImage.layer.cornerRadius = self.spotImage.frame.size.width / 2
@@ -39,9 +44,9 @@ class WakeboardCell: UITableViewCell {
 extension UIView {
     func makeSnowShadows() {
         self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowOpacity = 0.7
+        self.layer.shadowOpacity = 0.5
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.layer.shadowRadius = 10
-        
+        self.layer.shadowRadius = 2
+
     }
 }

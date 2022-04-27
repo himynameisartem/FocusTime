@@ -8,6 +8,7 @@ target 'NaSpote' do
 pod 'SwiftSoup'
 pod 'SideMenu'
 pod 'Kingfisher'
+pod 'Hero'
 
   # Pods for NaSpote
 

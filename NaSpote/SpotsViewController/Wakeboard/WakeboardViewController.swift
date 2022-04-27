@@ -9,6 +9,7 @@ import UIKit
 import SwiftSoup
 import Kingfisher
 
+
 class WakeboardViewController: UITableViewController {
     
     @IBOutlet var sideMenuBtn: UIBarButtonItem!
@@ -17,6 +18,7 @@ class WakeboardViewController: UITableViewController {
     var wakeboard = [WakeboardModelTest]()
 
     var spotCell = WakeboardCell()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,14 +63,19 @@ class WakeboardViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToDetailSpotVC"  {
+        if segue.identifier == "GoToDetailSpot"  {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let mapVC = segue.destination as! DetailWakeboardViewController
-                mapVC.spotTitle = wakeboard[indexPath.row].title
-                mapVC.spotLink = wakeboard[indexPath.row].link
-                mapVC.spotImage = wakeboard[indexPath.row].image
-                mapVC.locationString = wakeboard[indexPath.row].location
+                let mapVC = segue.destination as! ContainerViewController
+                mapVC.logo = wakeboard[indexPath.row].image
+                mapVC.link = wakeboard[indexPath.row].link
+
             }
         }
         

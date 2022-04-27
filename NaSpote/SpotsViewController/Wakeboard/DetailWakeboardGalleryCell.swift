@@ -10,4 +10,11 @@ import UIKit
 class DetailWakeboardGalleryCell: UICollectionViewCell {
     
     @IBOutlet var galleryImageView: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        galleryImageView.layer.borderWidth = 0.3
+    }
+    
 }
+
