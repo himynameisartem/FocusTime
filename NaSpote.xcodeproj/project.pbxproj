@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3104CB1128213D2700D61525 /* WakeboardListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104CB1028213D2700D61525 /* WakeboardListVC.swift */; };
+		3104CB1328213D5700D61525 /* WakeboardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104CB1228213D5700D61525 /* WakeboardListCell.swift */; };
 		3114196D27876931002986D7 /* DetailWakeboardGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114196C27876931002986D7 /* DetailWakeboardGalleryCell.swift */; };
 		31141973278B0196002986D7 /* SnowboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141972278B0196002986D7 /* SnowboardManager.swift */; };
 		31141975278B01A1002986D7 /* SnowboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141974278B01A1002986D7 /* SnowboardModel.swift */; };
@@ -28,6 +30,7 @@
 		3129F85627F429850007D05C /* DetailCampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85527F429850007D05C /* DetailCampModel.swift */; };
 		3129F85827F429920007D05C /* DetailCampManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85727F429920007D05C /* DetailCampManager.swift */; };
 		3129F86027F480B20007D05C /* DetailSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85F27F480B20007D05C /* DetailSpotViewController.swift */; };
+		3131E2F2281D39C100964ACE /* NewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3131E2F1281D39C100964ACE /* NewsDetailVC.swift */; };
 		31368C522780F75A009087BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C512780F75A009087BF /* MainViewController.swift */; };
 		31368C542780F78F009087BF /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C532780F78F009087BF /* SideMenuViewController.swift */; };
 		31368C572780F7C6009087BF /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C562780F7C6009087BF /* SideMenuModel.swift */; };
@@ -36,19 +39,19 @@
 		31368C802785F294009087BF /* DetailWakeboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C7F2785F294009087BF /* DetailWakeboardManager.swift */; };
 		31368C822785F29D009087BF /* DetailWakeboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C812785F29D009087BF /* DetailWakeboardModel.swift */; };
 		31368C842785F2D0009087BF /* DetailWakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */; };
+		3178950C28217E2700C12B0F /* SkiingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3178950B28217E2700C12B0F /* SkiingListVC.swift */; };
 		319864C627609FAE001837CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319864C527609FAE001837CE /* MapKit.framework */; };
 		319864CA27610DDD001837CE /* LocationWakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319864C927610DDD001837CE /* LocationWakeboardViewController.swift */; };
 		31B9AE5327F30DDE00489667 /* CampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9AE5227F30DDE00489667 /* CampModel.swift */; };
 		31B9AE5527F30DF800489667 /* CampManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9AE5427F30DF800489667 /* CampManager.swift */; };
-		31BC9D72275A5B2F00A7B474 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D71275A5B2F00A7B474 /* NewsViewController.swift */; };
-		31BC9D78275BCEC900A7B474 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D77275BCEC900A7B474 /* NewsCell.swift */; };
-		31BC9D7A275BDC0C00A7B474 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D79275BDC0C00A7B474 /* DetailNewsViewController.swift */; };
-		31BC9D7C275BF44F00A7B474 /* DetailNewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D7B275BF44F00A7B474 /* DetailNewsManager.swift */; };
-		31BC9D7E275BFBB000A7B474 /* DetailNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D7D275BFBB000A7B474 /* DetailNewsModel.swift */; };
+		31BC9D7C275BF44F00A7B474 /* NewsDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D7B275BF44F00A7B474 /* NewsDetailManager.swift */; };
+		31BC9D7E275BFBB000A7B474 /* NewsDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D7D275BFBB000A7B474 /* NewsDetailModel.swift */; };
 		31BC9D81275CE52F00A7B474 /* WakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D80275CE52F00A7B474 /* WakeboardViewController.swift */; };
 		31BC9D83275CE55000A7B474 /* WakeboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D82275CE55000A7B474 /* WakeboardCell.swift */; };
 		31BC9D86275CE5FA00A7B474 /* WakeboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */; };
 		31BC9D88275CE60700A7B474 /* WakeboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D87275CE60700A7B474 /* WakeboardModel.swift */; };
+		31D66BE2281E8FD000E24EBA /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D66BE1281E8FD000E24EBA /* NewsVC.swift */; };
+		31E29FCC281EA802004E1B94 /* NewsVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E29FCB281EA802004E1B94 /* NewsVCCell.swift */; };
 		31E6B79428095A2500AB7B0E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6B79328095A2500AB7B0E /* ContainerViewController.swift */; };
 		95817E1F5502E19ADB534B32 /* Pods_NaSpote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023DF0BFF193E97D87695B6A /* Pods_NaSpote.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +59,8 @@
 /* Begin PBXFileReference section */
 		023DF0BFF193E97D87695B6A /* Pods_NaSpote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaSpote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B571B1BE65FED5D6E88162F /* Pods-NaSpote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaSpote.release.xcconfig"; path = "Target Support Files/Pods-NaSpote/Pods-NaSpote.release.xcconfig"; sourceTree = "<group>"; };
+		3104CB1028213D2700D61525 /* WakeboardListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardListVC.swift; sourceTree = "<group>"; };
+		3104CB1228213D5700D61525 /* WakeboardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardListCell.swift; sourceTree = "<group>"; };
 		3114196C27876931002986D7 /* DetailWakeboardGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardGalleryCell.swift; sourceTree = "<group>"; };
 		31141972278B0196002986D7 /* SnowboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardManager.swift; sourceTree = "<group>"; };
 		31141974278B01A1002986D7 /* SnowboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardModel.swift; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 		3129F85527F429850007D05C /* DetailCampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampModel.swift; sourceTree = "<group>"; };
 		3129F85727F429920007D05C /* DetailCampManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampManager.swift; sourceTree = "<group>"; };
 		3129F85F27F480B20007D05C /* DetailSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSpotViewController.swift; sourceTree = "<group>"; };
+		3131E2F1281D39C100964ACE /* NewsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailVC.swift; sourceTree = "<group>"; };
 		31368C512780F75A009087BF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		31368C532780F78F009087BF /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		31368C562780F7C6009087BF /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
@@ -87,19 +93,19 @@
 		31368C7F2785F294009087BF /* DetailWakeboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardManager.swift; sourceTree = "<group>"; };
 		31368C812785F29D009087BF /* DetailWakeboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardModel.swift; sourceTree = "<group>"; };
 		31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardViewController.swift; sourceTree = "<group>"; };
+		3178950B28217E2700C12B0F /* SkiingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiingListVC.swift; sourceTree = "<group>"; };
 		319864C527609FAE001837CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		319864C927610DDD001837CE /* LocationWakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWakeboardViewController.swift; sourceTree = "<group>"; };
 		31B9AE5227F30DDE00489667 /* CampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampModel.swift; sourceTree = "<group>"; };
 		31B9AE5427F30DF800489667 /* CampManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampManager.swift; sourceTree = "<group>"; };
-		31BC9D71275A5B2F00A7B474 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		31BC9D77275BCEC900A7B474 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
-		31BC9D79275BDC0C00A7B474 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
-		31BC9D7B275BF44F00A7B474 /* DetailNewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsManager.swift; sourceTree = "<group>"; };
-		31BC9D7D275BFBB000A7B474 /* DetailNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsModel.swift; sourceTree = "<group>"; };
+		31BC9D7B275BF44F00A7B474 /* NewsDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailManager.swift; sourceTree = "<group>"; };
+		31BC9D7D275BFBB000A7B474 /* NewsDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailModel.swift; sourceTree = "<group>"; };
 		31BC9D80275CE52F00A7B474 /* WakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardViewController.swift; sourceTree = "<group>"; };
 		31BC9D82275CE55000A7B474 /* WakeboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardCell.swift; sourceTree = "<group>"; };
 		31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardManager.swift; sourceTree = "<group>"; };
 		31BC9D87275CE60700A7B474 /* WakeboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardModel.swift; sourceTree = "<group>"; };
+		31D66BE1281E8FD000E24EBA /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		31E29FCB281EA802004E1B94 /* NewsVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVCCell.swift; sourceTree = "<group>"; };
 		31E6B79328095A2500AB7B0E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		503B60BCCCF21F93EA187164 /* Pods-NaSpote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaSpote.debug.xcconfig"; path = "Target Support Files/Pods-NaSpote/Pods-NaSpote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				3117AAD8273AADEE00E7A9EB /* Main.storyboard */,
+				3104CB1028213D2700D61525 /* WakeboardListVC.swift */,
+				3178950B28217E2700C12B0F /* SkiingListVC.swift */,
+				3104CB1228213D5700D61525 /* WakeboardListCell.swift */,
 				3117AAE0273AADF000E7A9EB /* LaunchScreen.storyboard */,
 			);
 			name = Views;
@@ -237,9 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				3117AB97274AB7BB00E7A9EB /* NewsModel.swift */,
+				31BC9D7D275BFBB000A7B474 /* NewsDetailModel.swift */,
 				3117AB94274AACE100E7A9EB /* NewsManager.swift */,
-				31BC9D7D275BFBB000A7B474 /* DetailNewsModel.swift */,
-				31BC9D7B275BF44F00A7B474 /* DetailNewsManager.swift */,
+				31BC9D7B275BF44F00A7B474 /* NewsDetailManager.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -277,9 +286,9 @@
 		31BC9D70275A5B0700A7B474 /* NewsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				31BC9D71275A5B2F00A7B474 /* NewsViewController.swift */,
-				31BC9D79275BDC0C00A7B474 /* DetailNewsViewController.swift */,
-				31BC9D77275BCEC900A7B474 /* NewsCell.swift */,
+				31D66BE1281E8FD000E24EBA /* NewsVC.swift */,
+				3131E2F1281D39C100964ACE /* NewsDetailVC.swift */,
+				31E29FCB281EA802004E1B94 /* NewsVCCell.swift */,
 			);
 			path = NewsViewController;
 			sourceTree = "<group>";
@@ -432,11 +441,10 @@
 			files = (
 				31B9AE5327F30DDE00489667 /* CampModel.swift in Sources */,
 				3117AB98274AB7BB00E7A9EB /* NewsModel.swift in Sources */,
-				31BC9D72275A5B2F00A7B474 /* NewsViewController.swift in Sources */,
 				3114196D27876931002986D7 /* DetailWakeboardGalleryCell.swift in Sources */,
 				31368C5A2780F95F009087BF /* SideMenuCell.swift in Sources */,
 				31141980278F582F002986D7 /* LcationSnowboardViewController.swift in Sources */,
-				31BC9D78275BCEC900A7B474 /* NewsCell.swift in Sources */,
+				31D66BE2281E8FD000E24EBA /* NewsVC.swift in Sources */,
 				31BC9D83275CE55000A7B474 /* WakeboardCell.swift in Sources */,
 				3114197E278B0342002986D7 /* SnowboardCell.swift in Sources */,
 				3129F85827F429920007D05C /* DetailCampManager.swift in Sources */,
@@ -456,15 +464,19 @@
 				3114197C278B02BF002986D7 /* SnowboardViewController.swift in Sources */,
 				31368C542780F78F009087BF /* SideMenuViewController.swift in Sources */,
 				31B9AE5527F30DF800489667 /* CampManager.swift in Sources */,
-				31BC9D7A275BDC0C00A7B474 /* DetailNewsViewController.swift in Sources */,
-				31BC9D7E275BFBB000A7B474 /* DetailNewsModel.swift in Sources */,
+				31BC9D7E275BFBB000A7B474 /* NewsDetailModel.swift in Sources */,
 				31141973278B0196002986D7 /* SnowboardManager.swift in Sources */,
 				31368C572780F7C6009087BF /* SideMenuModel.swift in Sources */,
 				3117AAD5273AADEE00E7A9EB /* SceneDelegate.swift in Sources */,
+				3131E2F2281D39C100964ACE /* NewsDetailVC.swift in Sources */,
+				3178950C28217E2700C12B0F /* SkiingListVC.swift in Sources */,
+				3104CB1328213D5700D61525 /* WakeboardListCell.swift in Sources */,
+				3104CB1128213D2700D61525 /* WakeboardListVC.swift in Sources */,
 				31141975278B01A1002986D7 /* SnowboardModel.swift in Sources */,
 				31141985278F67DD002986D7 /* DetailSnowboardGalleryCell.swift in Sources */,
 				31368C822785F29D009087BF /* DetailWakeboardModel.swift in Sources */,
-				31BC9D7C275BF44F00A7B474 /* DetailNewsManager.swift in Sources */,
+				31BC9D7C275BF44F00A7B474 /* NewsDetailManager.swift in Sources */,
+				31E29FCC281EA802004E1B94 /* NewsVCCell.swift in Sources */,
 				31368C842785F2D0009087BF /* DetailWakeboardViewController.swift in Sources */,
 				31BC9D86275CE5FA00A7B474 /* WakeboardManager.swift in Sources */,
 				31BC9D81275CE52F00A7B474 /* WakeboardViewController.swift in Sources */,

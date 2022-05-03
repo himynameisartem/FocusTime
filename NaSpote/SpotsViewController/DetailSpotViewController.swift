@@ -8,7 +8,6 @@
 import UIKit
 import MapKit
 import Kingfisher
-import Hero
 
 
 class DetailSpotViewController: UITableViewController {
@@ -52,24 +51,17 @@ class DetailSpotViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hero.isEnabled = true
-        tableView.heroID = "spot"
-
         spotGallery.delegate = self
         spotGallery.dataSource = self
         detailWakeboarManager.delegate = self
+
+        detailWakeboarManager.fetchSpot(link)
         
+        logoCellConfiguration()
+        infoCellConfiguration()
+        contactCellConfiguration()
+        location(contacts.location)
         
-
-            detailWakeboarManager.fetchSpot(link)
-            
-
-                logoCellConfiguration()
-                logoCellConfiguration()
-               infoCellConfiguration()
-                contactCellConfiguration()
-                location(contacts.location)
-
         
         
         tableView.reloadData()
@@ -193,15 +185,15 @@ extension DetailSpotViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "galleryCell", for: indexPath) as! DetailWakeboardGalleryCell
         
-
-            let image = self.contacts.gallery[indexPath.row]
-            let downloadImage = URL(string: image)
-            let resourses = ImageResource(downloadURL: downloadImage!)
-            let processor = DownsamplingImageProcessor(size: cell.galleryImageView.bounds.size)
-            
-            cell.galleryImageView.kf.indicatorType = .activity
-            cell.galleryImageView.kf.setImage(with: resourses, placeholder: nil, options: [.processor(processor)]) { (result) in  }
-
+        
+        let image = self.contacts.gallery[indexPath.row]
+        let downloadImage = URL(string: image)
+        let resourses = ImageResource(downloadURL: downloadImage!)
+        let processor = DownsamplingImageProcessor(size: cell.galleryImageView.bounds.size)
+        
+        cell.galleryImageView.kf.indicatorType = .activity
+        cell.galleryImageView.kf.setImage(with: resourses, placeholder: nil, options: [.processor(processor)]) { (result) in  }
+        
         
         
         return cell

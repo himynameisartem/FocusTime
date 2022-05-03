@@ -27,7 +27,7 @@ class WakeboardViewController: UITableViewController {
         tableView.dataSource = self
         
         DispatchQueue.main.async {
-            self.spotManager.fetchSpot()
+//            self.spotManager.fetchSpot()
         }
         
         self.sideMenuBtn.target = revealViewController()
@@ -73,7 +73,7 @@ class WakeboardViewController: UITableViewController {
         if segue.identifier == "GoToDetailSpot"  {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let mapVC = segue.destination as! ContainerViewController
-                mapVC.logo = wakeboard[indexPath.row].image
+//                mapVC.logo = wakeboard[indexPath.row].image
                 mapVC.link = wakeboard[indexPath.row].link
 
             }

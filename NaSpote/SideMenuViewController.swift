@@ -27,6 +27,7 @@ class SideMenuViewController: UIViewController {
         SideMenuModel(icon: UIImage(systemName: "bag.fill")!, title: "Магазин"),
         
     ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

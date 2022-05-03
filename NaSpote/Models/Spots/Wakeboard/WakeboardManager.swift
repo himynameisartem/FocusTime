@@ -17,11 +17,11 @@ struct WakeboardManager {
     
     var delegate: SpotManagerDelegate?
     
-    func fetchSpot() {
+    func fetchSpot(_ url: String) {
         
         var spot = [WakeboardModelTest]()
         
-        let urlString = "https://naspote.fun/%d0%b2%d0%b5%d0%b9%d0%ba%d0%b1%d0%be%d1%80%d0%b4/"
+        let urlString = url
         if let url = URL(string: urlString) {
             
             do {

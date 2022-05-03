@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "wakeboard1.png",
-      "idiom" : "universal",
+      "filename" : "Без имени-5.png",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "wakeboard50x50.png",
-      "idiom" : "universal",
+      "filename" : "Без имени-2.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "wakeboard25x25.png",
-      "idiom" : "universal",
+      "filename" : "Без имени-4.png",
+      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],
@@ -21,6 +21,6 @@
     "version" : 1
   },
   "properties" : {
-    "template-rendering-intent" : "original"
+    "preserves-vector-representation" : true
   }
 }

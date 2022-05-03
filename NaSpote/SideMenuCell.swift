@@ -15,6 +15,8 @@ class SideMenuCell: UITableViewCell {
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NAv-UV-ce2">
-                                <rect key="frame" x="0.0" y="230" width="414" height="402"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NAv-UV-ce2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="186" id="0Ex-aF-PU1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NAv-UV-ce2" secondAttribute="bottom" constant="230" id="1EW-71-CHV"/>
-                            <constraint firstItem="NAv-UV-ce2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1lo-CR-6lb"/>
-                            <constraint firstItem="NAv-UV-ce2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ai9-nR-U8t"/>
+                            <constraint firstItem="NAv-UV-ce2" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="1Bn-6g-lMX"/>
+                            <constraint firstItem="NAv-UV-ce2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SJS-Md-Wpa"/>
+                            <constraint firstAttribute="bottom" secondItem="NAv-UV-ce2" secondAttribute="bottom" id="cSM-09-CYm"/>
+                            <constraint firstItem="NAv-UV-ce2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eRP-wy-M6M"/>
                         </constraints>
                     </view>
                 </viewController>

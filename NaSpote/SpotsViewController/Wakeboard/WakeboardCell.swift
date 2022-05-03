@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Hero
 
 class WakeboardCell: UITableViewCell {
     
@@ -19,8 +18,6 @@ class WakeboardCell: UITableViewCell {
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        
-        spotShadow.heroID = "spot"
         
         spotShadow.makeSnowShadows()
         spotShadow.layer.cornerRadius = 10

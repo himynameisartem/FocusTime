@@ -1,28 +1,28 @@
 PODS:
-  - Hero (1.6.1)
+  - Cosmos (23.0.0)
   - Kingfisher (7.2.0)
   - SideMenu (6.5.0)
   - SwiftSoup (2.3.3)
 
 DEPENDENCIES:
-  - Hero
+  - Cosmos
   - Kingfisher
   - SideMenu
   - SwiftSoup
 
 SPEC REPOS:
   trunk:
-    - Hero
+    - Cosmos
     - Kingfisher
     - SideMenu
     - SwiftSoup
 
 SPEC CHECKSUMS:
-  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SwiftSoup: 8e4844e785a975744f2c2606f8b3844ef67eb259
 
-PODFILE CHECKSUM: 5c21947f84785a7b5a0ee850b9970c092f9dc8af
+PODFILE CHECKSUM: 2d57b9024af4811e3898ab244782cf5f8d35317e
 
 COCOAPODS: 1.11.2

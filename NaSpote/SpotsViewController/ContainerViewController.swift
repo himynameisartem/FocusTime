@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Hero
 
 class ContainerViewController: UIViewController {
     
@@ -102,7 +101,7 @@ class ContainerViewController: UIViewController {
     func addExitButton() {
         
         exitButton.translatesAutoresizingMaskIntoConstraints = false
-        exitButton.setBackgroundImage(UIImage(systemName: "xmark"), for: .normal)
+        exitButton.setBackgroundImage(UIImage(systemName: "multiply"), for: .normal)
         exitButton.tintColor = .black
         exitButton.layer.cornerRadius = 20
         exitButton.alpha = 0.5
@@ -122,8 +121,6 @@ class ContainerViewController: UIViewController {
     }
     
     @objc func exitButtonTapped() {
-        
-        hero.dismissViewController()
         
     }
     
