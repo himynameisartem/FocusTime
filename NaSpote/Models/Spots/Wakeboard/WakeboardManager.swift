@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftSoup
+import MapKit
 
 protocol SpotManagerDelegate {
     func didUpdateNews(spot: [WakeboardModelTest])
@@ -46,6 +47,7 @@ struct WakeboardManager {
                     let raitingAverage = Double(try htmlRaiting.select("span.drts-voting-rating-average").text())
                     let raitingCount = Int(try htmlRaiting.select("span.drts-voting-rating-count").text())
                     
+                    
                     var average: Double
                     var count: Int
                     if raitingAverage != nil, raitingCount != nil {
@@ -61,7 +63,6 @@ struct WakeboardManager {
                 }
                 
                 self.delegate?.didUpdateNews(spot: spot)
-                
             } catch let error {
                 print(error)
                 self.delegate?.didFailWithError(error: error)
@@ -69,4 +70,5 @@ struct WakeboardManager {
         }
     }
 }
+
 

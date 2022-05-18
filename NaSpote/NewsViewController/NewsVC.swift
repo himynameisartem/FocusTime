@@ -92,7 +92,6 @@ class NewsVC: UITableViewController {
         self.navigationController?.pushViewController(detailNewsVC, animated: true)
             
         }
-        
     }
 
 

@@ -9,16 +9,10 @@
 /* Begin PBXBuildFile section */
 		3104CB1128213D2700D61525 /* WakeboardListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104CB1028213D2700D61525 /* WakeboardListVC.swift */; };
 		3104CB1328213D5700D61525 /* WakeboardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104CB1228213D5700D61525 /* WakeboardListCell.swift */; };
-		3114196D27876931002986D7 /* DetailWakeboardGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114196C27876931002986D7 /* DetailWakeboardGalleryCell.swift */; };
 		31141973278B0196002986D7 /* SnowboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141972278B0196002986D7 /* SnowboardManager.swift */; };
 		31141975278B01A1002986D7 /* SnowboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141974278B01A1002986D7 /* SnowboardModel.swift */; };
 		31141977278B01B0002986D7 /* DetailSnowboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141976278B01B0002986D7 /* DetailSnowboardManager.swift */; };
 		31141979278B01BE002986D7 /* DetailSnowboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141978278B01BE002986D7 /* DetailSnowboardModel.swift */; };
-		3114197C278B02BF002986D7 /* SnowboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114197B278B02BF002986D7 /* SnowboardViewController.swift */; };
-		3114197E278B0342002986D7 /* SnowboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114197D278B0342002986D7 /* SnowboardCell.swift */; };
-		31141980278F582F002986D7 /* LcationSnowboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114197F278F582F002986D7 /* LcationSnowboardViewController.swift */; };
-		31141983278F63B9002986D7 /* DetailSnowboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141982278F63B9002986D7 /* DetailSnowboardViewController.swift */; };
-		31141985278F67DD002986D7 /* DetailSnowboardGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31141984278F67DD002986D7 /* DetailSnowboardGalleryCell.swift */; };
 		3117AAD3273AADEE00E7A9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AAD2273AADEE00E7A9EB /* AppDelegate.swift */; };
 		3117AAD5273AADEE00E7A9EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AAD4273AADEE00E7A9EB /* SceneDelegate.swift */; };
 		3117AADA273AADEE00E7A9EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3117AAD8273AADEE00E7A9EB /* Main.storyboard */; };
@@ -29,7 +23,6 @@
 		3117AB98274AB7BB00E7A9EB /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117AB97274AB7BB00E7A9EB /* NewsModel.swift */; };
 		3129F85627F429850007D05C /* DetailCampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85527F429850007D05C /* DetailCampModel.swift */; };
 		3129F85827F429920007D05C /* DetailCampManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85727F429920007D05C /* DetailCampManager.swift */; };
-		3129F86027F480B20007D05C /* DetailSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129F85F27F480B20007D05C /* DetailSpotViewController.swift */; };
 		3131E2F2281D39C100964ACE /* NewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3131E2F1281D39C100964ACE /* NewsDetailVC.swift */; };
 		31368C522780F75A009087BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C512780F75A009087BF /* MainViewController.swift */; };
 		31368C542780F78F009087BF /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C532780F78F009087BF /* SideMenuViewController.swift */; };
@@ -38,21 +31,22 @@
 		31368C5B2780F95F009087BF /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31368C592780F95F009087BF /* SideMenuCell.xib */; };
 		31368C802785F294009087BF /* DetailWakeboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C7F2785F294009087BF /* DetailWakeboardManager.swift */; };
 		31368C822785F29D009087BF /* DetailWakeboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C812785F29D009087BF /* DetailWakeboardModel.swift */; };
-		31368C842785F2D0009087BF /* DetailWakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */; };
 		3178950C28217E2700C12B0F /* SkiingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3178950B28217E2700C12B0F /* SkiingListVC.swift */; };
 		319864C627609FAE001837CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319864C527609FAE001837CE /* MapKit.framework */; };
-		319864CA27610DDD001837CE /* LocationWakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319864C927610DDD001837CE /* LocationWakeboardViewController.swift */; };
+		319B40FA2826F4A5009B6934 /* SpotCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B40F92826F4A5009B6934 /* SpotCardVC.swift */; };
+		319B40FC2826F54A009B6934 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B40FB2826F54A009B6934 /* TitleCell.swift */; };
+		319B40FE2826F559009B6934 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B40FD2826F559009B6934 /* InfoCell.swift */; };
+		319B4108282BC506009B6934 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4107282BC506009B6934 /* PhotoCell.swift */; };
+		319B410A282C595F009B6934 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4109282C595F009B6934 /* ServicesCell.swift */; };
+		319B410C282F90DB009B6934 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B410B282F90DB009B6934 /* LocationCell.swift */; };
 		31B9AE5327F30DDE00489667 /* CampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9AE5227F30DDE00489667 /* CampModel.swift */; };
 		31B9AE5527F30DF800489667 /* CampManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9AE5427F30DF800489667 /* CampManager.swift */; };
 		31BC9D7C275BF44F00A7B474 /* NewsDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D7B275BF44F00A7B474 /* NewsDetailManager.swift */; };
 		31BC9D7E275BFBB000A7B474 /* NewsDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D7D275BFBB000A7B474 /* NewsDetailModel.swift */; };
-		31BC9D81275CE52F00A7B474 /* WakeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D80275CE52F00A7B474 /* WakeboardViewController.swift */; };
-		31BC9D83275CE55000A7B474 /* WakeboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D82275CE55000A7B474 /* WakeboardCell.swift */; };
 		31BC9D86275CE5FA00A7B474 /* WakeboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */; };
 		31BC9D88275CE60700A7B474 /* WakeboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D87275CE60700A7B474 /* WakeboardModel.swift */; };
 		31D66BE2281E8FD000E24EBA /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D66BE1281E8FD000E24EBA /* NewsVC.swift */; };
 		31E29FCC281EA802004E1B94 /* NewsVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E29FCB281EA802004E1B94 /* NewsVCCell.swift */; };
-		31E6B79428095A2500AB7B0E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6B79328095A2500AB7B0E /* ContainerViewController.swift */; };
 		95817E1F5502E19ADB534B32 /* Pods_NaSpote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023DF0BFF193E97D87695B6A /* Pods_NaSpote.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,16 +55,10 @@
 		2B571B1BE65FED5D6E88162F /* Pods-NaSpote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaSpote.release.xcconfig"; path = "Target Support Files/Pods-NaSpote/Pods-NaSpote.release.xcconfig"; sourceTree = "<group>"; };
 		3104CB1028213D2700D61525 /* WakeboardListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardListVC.swift; sourceTree = "<group>"; };
 		3104CB1228213D5700D61525 /* WakeboardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardListCell.swift; sourceTree = "<group>"; };
-		3114196C27876931002986D7 /* DetailWakeboardGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardGalleryCell.swift; sourceTree = "<group>"; };
 		31141972278B0196002986D7 /* SnowboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardManager.swift; sourceTree = "<group>"; };
 		31141974278B01A1002986D7 /* SnowboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardModel.swift; sourceTree = "<group>"; };
 		31141976278B01B0002986D7 /* DetailSnowboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSnowboardManager.swift; sourceTree = "<group>"; };
 		31141978278B01BE002986D7 /* DetailSnowboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSnowboardModel.swift; sourceTree = "<group>"; };
-		3114197B278B02BF002986D7 /* SnowboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardViewController.swift; sourceTree = "<group>"; };
-		3114197D278B0342002986D7 /* SnowboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowboardCell.swift; sourceTree = "<group>"; };
-		3114197F278F582F002986D7 /* LcationSnowboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LcationSnowboardViewController.swift; sourceTree = "<group>"; };
-		31141982278F63B9002986D7 /* DetailSnowboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSnowboardViewController.swift; sourceTree = "<group>"; };
-		31141984278F67DD002986D7 /* DetailSnowboardGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSnowboardGalleryCell.swift; sourceTree = "<group>"; };
 		3117AACF273AADEE00E7A9EB /* NaSpote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaSpote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3117AAD2273AADEE00E7A9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3117AAD4273AADEE00E7A9EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +71,6 @@
 		3117AB97274AB7BB00E7A9EB /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		3129F85527F429850007D05C /* DetailCampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampModel.swift; sourceTree = "<group>"; };
 		3129F85727F429920007D05C /* DetailCampManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampManager.swift; sourceTree = "<group>"; };
-		3129F85F27F480B20007D05C /* DetailSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSpotViewController.swift; sourceTree = "<group>"; };
 		3131E2F1281D39C100964ACE /* NewsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailVC.swift; sourceTree = "<group>"; };
 		31368C512780F75A009087BF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		31368C532780F78F009087BF /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -92,21 +79,22 @@
 		31368C592780F95F009087BF /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		31368C7F2785F294009087BF /* DetailWakeboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardManager.swift; sourceTree = "<group>"; };
 		31368C812785F29D009087BF /* DetailWakeboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardModel.swift; sourceTree = "<group>"; };
-		31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWakeboardViewController.swift; sourceTree = "<group>"; };
 		3178950B28217E2700C12B0F /* SkiingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiingListVC.swift; sourceTree = "<group>"; };
 		319864C527609FAE001837CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		319864C927610DDD001837CE /* LocationWakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWakeboardViewController.swift; sourceTree = "<group>"; };
+		319B40F92826F4A5009B6934 /* SpotCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotCardVC.swift; sourceTree = "<group>"; };
+		319B40FB2826F54A009B6934 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		319B40FD2826F559009B6934 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		319B4107282BC506009B6934 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		319B4109282C595F009B6934 /* ServicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCell.swift; sourceTree = "<group>"; };
+		319B410B282F90DB009B6934 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		31B9AE5227F30DDE00489667 /* CampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampModel.swift; sourceTree = "<group>"; };
 		31B9AE5427F30DF800489667 /* CampManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampManager.swift; sourceTree = "<group>"; };
 		31BC9D7B275BF44F00A7B474 /* NewsDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailManager.swift; sourceTree = "<group>"; };
 		31BC9D7D275BFBB000A7B474 /* NewsDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailModel.swift; sourceTree = "<group>"; };
-		31BC9D80275CE52F00A7B474 /* WakeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardViewController.swift; sourceTree = "<group>"; };
-		31BC9D82275CE55000A7B474 /* WakeboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardCell.swift; sourceTree = "<group>"; };
 		31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardManager.swift; sourceTree = "<group>"; };
 		31BC9D87275CE60700A7B474 /* WakeboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardModel.swift; sourceTree = "<group>"; };
 		31D66BE1281E8FD000E24EBA /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		31E29FCB281EA802004E1B94 /* NewsVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVCCell.swift; sourceTree = "<group>"; };
-		31E6B79328095A2500AB7B0E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		503B60BCCCF21F93EA187164 /* Pods-NaSpote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaSpote.debug.xcconfig"; path = "Target Support Files/Pods-NaSpote/Pods-NaSpote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,30 +118,6 @@
 				2B571B1BE65FED5D6E88162F /* Pods-NaSpote.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		3114196F27878AA3002986D7 /* Wakeboard */ = {
-			isa = PBXGroup;
-			children = (
-				31BC9D80275CE52F00A7B474 /* WakeboardViewController.swift */,
-				31BC9D82275CE55000A7B474 /* WakeboardCell.swift */,
-				319864C927610DDD001837CE /* LocationWakeboardViewController.swift */,
-				31368C832785F2D0009087BF /* DetailWakeboardViewController.swift */,
-				3114196C27876931002986D7 /* DetailWakeboardGalleryCell.swift */,
-			);
-			path = Wakeboard;
-			sourceTree = "<group>";
-		};
-		3114197027878AB5002986D7 /* Snowboard */ = {
-			isa = PBXGroup;
-			children = (
-				3114197B278B02BF002986D7 /* SnowboardViewController.swift */,
-				3114197D278B0342002986D7 /* SnowboardCell.swift */,
-				3114197F278F582F002986D7 /* LcationSnowboardViewController.swift */,
-				31141982278F63B9002986D7 /* DetailSnowboardViewController.swift */,
-				31141984278F67DD002986D7 /* DetailSnowboardGalleryCell.swift */,
-			);
-			path = Snowboard;
 			sourceTree = "<group>";
 		};
 		31141971278B015C002986D7 /* Snowboard */ = {
@@ -223,9 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				3117AAD8273AADEE00E7A9EB /* Main.storyboard */,
-				3104CB1028213D2700D61525 /* WakeboardListVC.swift */,
-				3178950B28217E2700C12B0F /* SkiingListVC.swift */,
-				3104CB1228213D5700D61525 /* WakeboardListCell.swift */,
 				3117AAE0273AADF000E7A9EB /* LaunchScreen.storyboard */,
 			);
 			name = Views;
@@ -296,10 +257,15 @@
 		31BC9D7F275CE4F200A7B474 /* SpotsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3114196F27878AA3002986D7 /* Wakeboard */,
-				3114197027878AB5002986D7 /* Snowboard */,
-				3129F85F27F480B20007D05C /* DetailSpotViewController.swift */,
-				31E6B79328095A2500AB7B0E /* ContainerViewController.swift */,
+				3104CB1028213D2700D61525 /* WakeboardListVC.swift */,
+				3178950B28217E2700C12B0F /* SkiingListVC.swift */,
+				3104CB1228213D5700D61525 /* WakeboardListCell.swift */,
+				319B40F92826F4A5009B6934 /* SpotCardVC.swift */,
+				319B40FB2826F54A009B6934 /* TitleCell.swift */,
+				319B40FD2826F559009B6934 /* InfoCell.swift */,
+				319B4107282BC506009B6934 /* PhotoCell.swift */,
+				319B4109282C595F009B6934 /* ServicesCell.swift */,
+				319B410B282F90DB009B6934 /* LocationCell.swift */,
 			);
 			path = SpotsViewController;
 			sourceTree = "<group>";
@@ -439,29 +405,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319B410C282F90DB009B6934 /* LocationCell.swift in Sources */,
 				31B9AE5327F30DDE00489667 /* CampModel.swift in Sources */,
 				3117AB98274AB7BB00E7A9EB /* NewsModel.swift in Sources */,
-				3114196D27876931002986D7 /* DetailWakeboardGalleryCell.swift in Sources */,
 				31368C5A2780F95F009087BF /* SideMenuCell.swift in Sources */,
-				31141980278F582F002986D7 /* LcationSnowboardViewController.swift in Sources */,
 				31D66BE2281E8FD000E24EBA /* NewsVC.swift in Sources */,
-				31BC9D83275CE55000A7B474 /* WakeboardCell.swift in Sources */,
-				3114197E278B0342002986D7 /* SnowboardCell.swift in Sources */,
+				319B40FC2826F54A009B6934 /* TitleCell.swift in Sources */,
 				3129F85827F429920007D05C /* DetailCampManager.swift in Sources */,
 				3117AAD3273AADEE00E7A9EB /* AppDelegate.swift in Sources */,
-				3129F86027F480B20007D05C /* DetailSpotViewController.swift in Sources */,
-				31E6B79428095A2500AB7B0E /* ContainerViewController.swift in Sources */,
 				31368C802785F294009087BF /* DetailWakeboardManager.swift in Sources */,
 				3129F85627F429850007D05C /* DetailCampModel.swift in Sources */,
-				319864CA27610DDD001837CE /* LocationWakeboardViewController.swift in Sources */,
+				319B40FA2826F4A5009B6934 /* SpotCardVC.swift in Sources */,
 				31141979278B01BE002986D7 /* DetailSnowboardModel.swift in Sources */,
-				31141983278F63B9002986D7 /* DetailSnowboardViewController.swift in Sources */,
 				3117AADD273AADEE00E7A9EB /* NaSpote.xcdatamodeld in Sources */,
+				319B4108282BC506009B6934 /* PhotoCell.swift in Sources */,
 				31368C522780F75A009087BF /* MainViewController.swift in Sources */,
+				319B40FE2826F559009B6934 /* InfoCell.swift in Sources */,
 				31141977278B01B0002986D7 /* DetailSnowboardManager.swift in Sources */,
 				3117AB95274AACE100E7A9EB /* NewsManager.swift in Sources */,
 				31BC9D88275CE60700A7B474 /* WakeboardModel.swift in Sources */,
-				3114197C278B02BF002986D7 /* SnowboardViewController.swift in Sources */,
 				31368C542780F78F009087BF /* SideMenuViewController.swift in Sources */,
 				31B9AE5527F30DF800489667 /* CampManager.swift in Sources */,
 				31BC9D7E275BFBB000A7B474 /* NewsDetailModel.swift in Sources */,
@@ -470,16 +432,14 @@
 				3117AAD5273AADEE00E7A9EB /* SceneDelegate.swift in Sources */,
 				3131E2F2281D39C100964ACE /* NewsDetailVC.swift in Sources */,
 				3178950C28217E2700C12B0F /* SkiingListVC.swift in Sources */,
+				319B410A282C595F009B6934 /* ServicesCell.swift in Sources */,
 				3104CB1328213D5700D61525 /* WakeboardListCell.swift in Sources */,
 				3104CB1128213D2700D61525 /* WakeboardListVC.swift in Sources */,
 				31141975278B01A1002986D7 /* SnowboardModel.swift in Sources */,
-				31141985278F67DD002986D7 /* DetailSnowboardGalleryCell.swift in Sources */,
 				31368C822785F29D009087BF /* DetailWakeboardModel.swift in Sources */,
 				31BC9D7C275BF44F00A7B474 /* NewsDetailManager.swift in Sources */,
 				31E29FCC281EA802004E1B94 /* NewsVCCell.swift in Sources */,
-				31368C842785F2D0009087BF /* DetailWakeboardViewController.swift in Sources */,
 				31BC9D86275CE5FA00A7B474 /* WakeboardManager.swift in Sources */,
-				31BC9D81275CE52F00A7B474 /* WakeboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -611,7 +571,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -627,16 +587,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HZU66MWZY7;
+				DEVELOPMENT_TEAM = F7VWXXMUD7;
 				INFOPLIST_FILE = NaSpote/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.himynameisartem.NaSpote;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ArtemKudryavtsev.NaSpote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -648,16 +610,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HZU66MWZY7;
+				DEVELOPMENT_TEAM = F7VWXXMUD7;
 				INFOPLIST_FILE = NaSpote/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.himynameisartem.NaSpote;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ArtemKudryavtsev.NaSpote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
