@@ -18,10 +18,12 @@ class TitleCell: UITableViewCell {
         super.awakeFromNib()
         
         DispatchQueue.main.async {
+            
             self.logo.layer.cornerRadius = self.logo.frame.height / 2
             self.logo.layer.borderWidth = 0.5
             self.logo.clipsToBounds = true
             self.logo.contentMode = .scaleAspectFill
+            
         }
         
         logo.translatesAutoresizingMaskIntoConstraints = false
@@ -30,12 +32,6 @@ class TitleCell: UITableViewCell {
         
         rating.settings.updateOnTouch = false
         
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     func UIfontLabel(label: UILabel, font: String, viewHeight: Double, size: CGFloat) {

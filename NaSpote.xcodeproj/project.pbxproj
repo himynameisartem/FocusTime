@@ -46,6 +46,8 @@
 		31BC9D86275CE5FA00A7B474 /* WakeboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */; };
 		31BC9D88275CE60700A7B474 /* WakeboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC9D87275CE60700A7B474 /* WakeboardModel.swift */; };
 		31D66BE2281E8FD000E24EBA /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D66BE1281E8FD000E24EBA /* NewsVC.swift */; };
+		31D7A0652836DB1600989290 /* CampCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D7A0642836DB1600989290 /* CampCell.swift */; };
+		31D7A0672836DB2700989290 /* CampVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D7A0662836DB2700989290 /* CampVC.swift */; };
 		31E29FCC281EA802004E1B94 /* NewsVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E29FCB281EA802004E1B94 /* NewsVCCell.swift */; };
 		95817E1F5502E19ADB534B32 /* Pods_NaSpote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023DF0BFF193E97D87695B6A /* Pods_NaSpote.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +96,8 @@
 		31BC9D85275CE5FA00A7B474 /* WakeboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardManager.swift; sourceTree = "<group>"; };
 		31BC9D87275CE60700A7B474 /* WakeboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeboardModel.swift; sourceTree = "<group>"; };
 		31D66BE1281E8FD000E24EBA /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		31D7A0642836DB1600989290 /* CampCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampCell.swift; sourceTree = "<group>"; };
+		31D7A0662836DB2700989290 /* CampVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampVC.swift; sourceTree = "<group>"; };
 		31E29FCB281EA802004E1B94 /* NewsVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVCCell.swift; sourceTree = "<group>"; };
 		503B60BCCCF21F93EA187164 /* Pods-NaSpote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaSpote.debug.xcconfig"; path = "Target Support Files/Pods-NaSpote/Pods-NaSpote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +183,7 @@
 				31368C502780F701009087BF /* SideMenuController */,
 				31BC9D70275A5B0700A7B474 /* NewsViewController */,
 				31BC9D7F275CE4F200A7B474 /* SpotsViewController */,
+				31D7A0632836DA1D00989290 /* CampViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +284,15 @@
 				31368C7F2785F294009087BF /* DetailWakeboardManager.swift */,
 			);
 			path = Wakeboard;
+			sourceTree = "<group>";
+		};
+		31D7A0632836DA1D00989290 /* CampViewController */ = {
+			isa = PBXGroup;
+			children = (
+				31D7A0662836DB2700989290 /* CampVC.swift */,
+				31D7A0642836DB1600989290 /* CampCell.swift */,
+			);
+			path = CampViewController;
 			sourceTree = "<group>";
 		};
 		D836932BA1EDA0AF89296FB6 /* Frameworks */ = {
@@ -415,6 +429,8 @@
 				3117AAD3273AADEE00E7A9EB /* AppDelegate.swift in Sources */,
 				31368C802785F294009087BF /* DetailWakeboardManager.swift in Sources */,
 				3129F85627F429850007D05C /* DetailCampModel.swift in Sources */,
+				31D7A0652836DB1600989290 /* CampCell.swift in Sources */,
+				31D7A0672836DB2700989290 /* CampVC.swift in Sources */,
 				319B40FA2826F4A5009B6934 /* SpotCardVC.swift in Sources */,
 				31141979278B01BE002986D7 /* DetailSnowboardModel.swift in Sources */,
 				3117AADD273AADEE00E7A9EB /* NaSpote.xcdatamodeld in Sources */,

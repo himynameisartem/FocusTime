@@ -28,6 +28,7 @@ class WakeboardListVC: UITableViewController {
     }
     
     var wakeboardManager = WakeboardManager()
+
     
     
     override func viewDidLoad() {
@@ -54,7 +55,7 @@ class WakeboardListVC: UITableViewController {
         sortingBarButtonItem.tintColor = .black
         sortingBarButtonItem.action = #selector(sortedButtonTapped)
         sortingBarButtonItem.target = self
-        navigationItem.rightBarButtonItem = sortingBarButtonItem
+//        navigationItem.rightBarButtonItem = sortingBarButtonItem
         navigationItem.leftBarButtonItem = menuBarButtonItem
         
         
@@ -210,6 +211,7 @@ extension WakeboardListVC: UISearchResultsUpdating {
         tableView.reloadData()
     }
 }
+
 
 
 

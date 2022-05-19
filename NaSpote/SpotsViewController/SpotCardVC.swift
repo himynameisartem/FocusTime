@@ -7,7 +7,6 @@
 
 import UIKit
 import Kingfisher
-//import CoreMedia
 import MapKit
 
 class SpotCardVC: UIViewController {
@@ -40,9 +39,15 @@ class SpotCardVC: UIViewController {
     var openSections = false
     
     @IBOutlet var cardSpotTable: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        detailWakeboarManager.delegate = self
+        
+        DispatchQueue.main.async {
+            self.detailWakeboarManager.fetchSpot(self.link)
+            self.cardSpotTable.register(UITableViewCell.self, forCellReuseIdentifier: "cardCell")
+        }
         
         addCallButton()
         addReserveButton()
@@ -63,11 +68,7 @@ class SpotCardVC: UIViewController {
         cardSpotTable.showsVerticalScrollIndicator = false
         cardSpotTable.rowHeight = UITableView.automaticDimension
         
-        cardSpotTable.register(UITableViewCell.self, forCellReuseIdentifier: "cardCell")
         
-        detailWakeboarManager.delegate = self
-        
-        self.detailWakeboarManager.fetchSpot(self.link)
         
     }
 }
@@ -97,14 +98,20 @@ extension SpotCardVC: UITableViewDelegate, UITableViewDataSource {
         
         if section == 3 {
             if openSections {
+                
                 return contacts.services.count + 1
+                
             } else {
+                
                 return 1
             }
+            
         }
         
         if section == 1 {
+            
             return infoTitle.count
+            
         }
         
         return 1
@@ -117,19 +124,22 @@ extension SpotCardVC: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! TitleCell
             
+            
             cell.addSubview(cell.logo)
             cell.addSubview(cell.title)
             cell.addSubview(cell.rating)
-            
+
             cell.separatorInset.left = 0
             
-            let processor = DownsamplingImageProcessor(size: cell.bounds.size)
+            DispatchQueue.main.async {
+                
+                let processor = DownsamplingImageProcessor(size: cell.bounds.size)
             
-            cell.logo.kf.indicatorType = .activity
-            cell.logo.kf.setImage(with: URL(string: logo), placeholder: UIImage(named: "NotFound"), options: [.processor(processor)])
+                cell.logo.kf.indicatorType = .activity
+                cell.logo.kf.setImage(with: URL(string: self.logo), placeholder: UIImage(named: "NotFound"), options: [.processor(processor)])
+                cell.title.text = self.contacts.title
+            }
             
-            
-            cell.title.text = contacts.title
             cell.UIfontLabel(label: cell.title, font: "Helvetica-bold", viewHeight: view.frame.height, size: 14)
             
             NSLayoutConstraint.activate([
@@ -155,89 +165,6 @@ extension SpotCardVC: UITableViewDelegate, UITableViewDataSource {
         
         // MARK: Info Cell
         
-        
-//        if indexPath.section == 1 {
-//
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! InfoCell
-//
-//            cell.addSubview(cell.mainStack)
-//
-//            cell.mainStack.addArrangedSubview(cell.leftStack)
-//            cell.mainStack.addArrangedSubview(cell.rightStack)
-//
-//            cell.leftStack.addArrangedSubview(cell.weekdayTitle)
-//            cell.leftStack.addArrangedSubview(cell.weekendTitle)
-//            cell.leftStack.addArrangedSubview(cell.setDurationTitle)
-//            cell.leftStack.addArrangedSubview(cell.workHoursTitle)
-//
-//            cell.rightStack.addArrangedSubview(cell.weekdayContent)
-//            cell.rightStack.addArrangedSubview(cell.weekendContent)
-//            cell.rightStack.addArrangedSubview(cell.setDurationContent)
-//            cell.rightStack.addArrangedSubview(cell.workHoursContent)
-//
-//
-//
-//            cell.weekdayTitle.text = contacts.weekday.title
-//            cell.weekendTitle.text = contacts.weekend.title
-//            cell.setDurationTitle.text = contacts.setDuration.title
-//            cell.workHoursTitle.text = contacts.workingHours.title
-//            cell.weekdayContent.text = contacts.weekday.price
-//            cell.weekendContent.text = contacts.weekend.price
-//            cell.setDurationContent.text = contacts.setDuration.duration
-//            cell.workHoursContent.text = contacts.workingHours.hours
-//
-//
-//            if let count = cell.workHoursContent.text?.count {
-//                if count > 31 {
-//                    cell.rightStack.spacing = 0
-//                    cell.leftStack.spacing = 0
-//                }
-//            }
-//
-//            if cell.weekdayTitle.text == "" || cell.weekdayContent.text == "" {
-//                cell.weekdayTitle.isHidden = true
-//                cell.weekdayContent.isHidden = true
-//            }
-//
-//            if cell.weekendTitle.text == "" || cell.weekendContent.text == "" {
-//                cell.weekendTitle.isHidden = true
-//                cell.weekendContent.isHidden = true
-//            }
-//
-//            if cell.setDurationTitle.text == "" || cell.setDurationContent.text == "" {
-//                cell.setDurationTitle.isHidden = true
-//                cell.setDurationContent.isHidden = true
-//            }
-//
-//            if cell.workHoursTitle.text == "" || cell.workHoursContent.text == "" {
-//                cell.workHoursTitle.isHidden = true
-//                cell.workHoursContent.isHidden = true
-//            }
-//
-//
-//            cell.UIfontLabel(label: cell.weekdayTitle, font: "Helvetica-light", viewHeight: view.frame.height, size: 8)
-//            cell.UIfontLabel(label: cell.weekendTitle, font: "Helvetica-light", viewHeight: view.frame.height, size: 8)
-//            cell.UIfontLabel(label: cell.setDurationTitle, font: "Helvetica-light", viewHeight: view.frame.height, size: 8)
-//            cell.UIfontLabel(label: cell.workHoursTitle, font: "Helvetica-light", viewHeight: view.frame.height, size: 8)
-//
-//            cell.UIfontLabel(label: cell.weekdayContent, font: "Helvetica-light", viewHeight: view.frame.height, size: 8)
-//            cell.UIfontLabel(label: cell.weekendContent, font: "Helvetica-light", viewHeight: view.frame.height, size: 8)
-//            cell.UIfontLabel(label: cell.setDurationContent, font: "Helvetica-light", viewHeight: view.frame.height, size: 8)
-//            cell.UIfontLabel(label: cell.workHoursContent, font: "Helvetica-light", viewHeight: view.frame.height, size: 8)
-//
-//            NSLayoutConstraint.activate([
-//
-//                cell.mainStack.topAnchor.constraint(equalTo: cell.topAnchor, constant: 10),
-//                cell.mainStack.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 10),
-//                cell.mainStack.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -10),
-//                cell.mainStack.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -10)
-//
-//            ])
-//
-//            return cell
-//
-//        }
-        
         if indexPath.section == 1 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! InfoCell
@@ -248,23 +175,21 @@ extension SpotCardVC: UITableViewDelegate, UITableViewDataSource {
             cell.leftLabel.textAlignment = .left
             cell.rightLabel.textAlignment = .right
             
-//            cell.separatorInset.left = 20
+            cell.leftLabel.text = self.infoTitle[indexPath.row]
+            cell.rightLabel.text = self.infoContent[indexPath.row]
+           
             
-            cell.leftLabel.text = infoTitle[indexPath.row]
-            cell.rightLabel.text = infoContent[indexPath.row]
-            
-            cell.UIfontLabel(label: cell.leftLabel, font: "helvetica-Light", viewHeight: view.frame.height, size: 10)
-            cell.UIfontLabel(label: cell.rightLabel, font: "helvetica-Light", viewHeight: view.frame.height, size: 10)
-
+            cell.UIfontLabel(label: cell.leftLabel, font: "helvetica-Light", viewHeight: view.frame.height, size: 8)
+            cell.UIfontLabel(label: cell.rightLabel, font: "helvetica-Light", viewHeight: view.frame.height, size: 8)
             
             NSLayoutConstraint.activate([
-            
-                cell.leftLabel.topAnchor.constraint(equalTo: cell.topAnchor, constant: 10),
+                
+                cell.leftLabel.topAnchor.constraint(equalTo: cell.topAnchor, constant: 8),
                 cell.leftLabel.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 10),
-                cell.leftLabel.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -10),
-                cell.rightLabel.topAnchor.constraint(equalTo: cell.topAnchor, constant:  10),
+                cell.leftLabel.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -8),
+                cell.rightLabel.topAnchor.constraint(equalTo: cell.topAnchor, constant:  8),
                 cell.rightLabel.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -10),
-                cell.rightLabel.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -10),
+                cell.rightLabel.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -8),
                 cell.rightLabel.widthAnchor.constraint(equalToConstant: view.frame.width / 2)
                 
             ])
@@ -281,9 +206,12 @@ extension SpotCardVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoCell
             
             cell.addSubview(cell.photoCollection)
-            cell.viewHewight = Int(view.frame.height / 5.6)
             
-            cell.array = contacts.gallery
+            DispatchQueue.main.async {
+                cell.viewHewight = Int(self.view.frame.height / 5.6)
+                cell.array = self.contacts.gallery
+            }
+            
             
             cell.separatorInset.left = 0
             
@@ -322,7 +250,7 @@ extension SpotCardVC: UITableViewDelegate, UITableViewDataSource {
                 cell.UIfontLabel(label: cell.title, font: "Helvetica-Bold", viewHeight: view.frame.height, size: 16)
                 
                 NSLayoutConstraint.activate([
-                
+                    
                     cell.title.topAnchor.constraint(equalTo: cell.topAnchor, constant: 10),
                     cell.title.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant:  10),
                     cell.title.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -10),
@@ -330,7 +258,7 @@ extension SpotCardVC: UITableViewDelegate, UITableViewDataSource {
                     cell.arrow.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -10),
                     cell.arrow.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -10),
                     cell.arrow.widthAnchor.constraint(equalTo: cell.arrow.heightAnchor)
-                
+                    
                 ])
                 
                 
@@ -368,7 +296,10 @@ extension SpotCardVC: UITableViewDelegate, UITableViewDataSource {
             
             cell.addSubview(cell.map)
             
-            cell.location(contacts.location, cell.map)
+            DispatchQueue.main.async {
+                cell.location(self.contacts.location, cell.map)
+                
+            }
             
             NSLayoutConstraint.activate([
                 
@@ -399,8 +330,8 @@ extension SpotCardVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 3 {
             if indexPath.row > 0 {
-            
-            return 40
+                
+                return 40
             }
         }
         
@@ -467,7 +398,7 @@ extension SpotCardVC {
         
         exitButton.translatesAutoresizingMaskIntoConstraints = false
         exitButton.backgroundColor = .systemGray3
-        exitButton.alpha = 0.6
+        exitButton.alpha = 0.4
         exitButton.layer.cornerRadius = 20
         exitButton.setImage(UIImage(systemName: "multiply"), for: .normal)
         exitButton.tintColor = .black
@@ -716,6 +647,8 @@ extension SpotCardVC: DetailSpotManagerDelegate {
             infoTitle.append(spot.workingHours.title)
             infoContent.append(spot.workingHours.hours)
         }
+        
+        cardSpotTable.reloadData()
         
     }
     

@@ -32,7 +32,11 @@ class PhotoCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         photoCollection.delegate = self
         photoCollection.dataSource = self
         photoCollection.showsHorizontalScrollIndicator = false
-        photoCollection.register(ImageCell.self, forCellWithReuseIdentifier: photoCellID)
+        
+        DispatchQueue.main.async {
+            self.photoCollection.register(ImageCell.self, forCellWithReuseIdentifier: self.photoCellID)
+            self.photoCollection.reloadData()
+        }
                 
     }
 
@@ -46,10 +50,13 @@ class PhotoCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         
         cell.addSubview(cell.gallery)
         
-        let processor = DownsamplingImageProcessor(size: cell.bounds.size)
+        DispatchQueue.main.async {
+            
+            let processor = DownsamplingImageProcessor(size: cell.bounds.size)
+            cell.gallery.kf.indicatorType = .activity
+            cell.gallery.kf.setImage(with: URL(string: self.array[indexPath.row]), placeholder: UIImage(named: "NotFound"), options: [.processor(processor)])
+        }
         
-        cell.gallery.kf.indicatorType = .activity
-        cell.gallery.kf.setImage(with: URL(string: array[indexPath.row]), placeholder: UIImage(named: "NotFound"), options: [.processor(processor)])
         
         NSLayoutConstraint.activate([
         
